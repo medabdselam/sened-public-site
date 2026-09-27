@@ -1,0 +1,9 @@
+# security.txt — سند للمطاعم / Sened for Restaurants
+# https://www.rfc-editor.org/rfc/rfc9116
+
+Contact: mailto:support@sened.group
+Expires: 2027-09-27T00:00:00.000Z
+Preferred-Languages: ar, en, fr
+Canonical: https://rst.sened.group/.well-known/security.txt
+Policy: https://rst.sened.group/security.html
+Policy: https://rst.sened.group/en/security.html
