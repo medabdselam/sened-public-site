@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Sened pour Restaurants — de la salle à la cuisine</title>
+<meta name="description" content="Sened pour Restaurants est un système de caisse et de gestion qui tourne sur l'appareil du restaurant et son réseau local : commandes, écran cuisine, stock, dépenses et rapports, avec sauvegarde Google Drive optionnelle.">
+<meta name="theme-color" content="#101410">
+<link rel="canonical" href="https://rst.sened.group/fr/">
+<link rel="alternate" hreflang="ar" href="https://rst.sened.group/">
+<link rel="alternate" hreflang="en" href="https://rst.sened.group/en/">
+<link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/">
+<link rel="alternate" hreflang="x-default" href="https://rst.sened.group/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rst.sened.group/fr/">
+<meta property="og:site_name" content="Sened pour Restaurants">
+<meta property="og:title" content="Sened pour Restaurants — de la salle à la cuisine">
+<meta property="og:description" content="Un système de caisse et de gestion qui tourne sur votre appareil et votre réseau local — sans internet, sans serveur intermédiaire.">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Reem+Kufi:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header id="hd">
+  <div class="hd-in">
+    <a class="brand" href="/fr/"><b>Sened</b><span>pour Restaurants</span></a>
+    <div class="lang" aria-label="Langue">
+      <a href="/" lang="ar" hreflang="ar">ع</a>
+      <a href="/en/" lang="en" hreflang="en">EN</a>
+      <a href="/fr/" aria-current="true" lang="fr" hreflang="fr">FR</a>
+    </div>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="/fr/" aria-current="page">Accueil</a>
+      <a href="#work">Ce qu'il fait</a>
+      <a href="#setup">Mise en place</a>
+      <a href="#drive">Google Drive</a>
+      <a href="/fr/security.html">Sécurité</a>
+      <a href="/fr/privacy.html">Confidentialité</a>
+      <a href="/fr/terms.html">Conditions</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap">
+    <h1>La commande passe de la salle à la cuisine, sans internet.</h1>
+    <p class="lead">Sened gère votre restaurant depuis votre appareil : commandes, écran de cuisine, stock, dépenses et rapports. Les appareils des serveurs et de la cuisine passent par le réseau local du restaurant, et les données n'en sortent que dans une sauvegarde que vous décidez.</p>
+    <div class="keys">
+      <a class="key key-1" href="#work">Ce que fait Sened</a>
+      <a class="key" href="#drive">La sauvegarde</a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="pass" role="img" aria-label="Trois bons de commande sur un écran de cuisine : une commande nouvelle, une en préparation, et une prête à servir">
+      <article class="ticket">
+        <div class="t-head"><span class="t-no">#142</span><span class="t-table">Table 6</span></div>
+        <ul class="t-lines">
+          <li><span>Chawarma poulet</span><b>2</b></li>
+          <li><span>Salade</span><b>1</b></li>
+          <li><span>Jus de citron</span><b>2</b></li>
+        </ul>
+        <div class="t-foot"><span class="t-time">00:18</span><span class="t-state is-new">Nouveau</span></div>
+      </article>
+      <article class="ticket">
+        <div class="t-head"><span class="t-no">#141</span><span class="t-table">À emporter</span></div>
+        <ul class="t-lines">
+          <li><span>Plat de poisson</span><b>1</b></li>
+          <li><span>Riz blanc</span><b>1</b></li>
+        </ul>
+        <div class="t-foot"><span class="t-time">04:12</span><span class="t-state is-cooking">En cuisson</span></div>
+      </article>
+      <article class="ticket">
+        <div class="t-head"><span class="t-no">#139</span><span class="t-table">Table 2</span></div>
+        <ul class="t-lines">
+          <li><span>Viande grillée</span><b>3</b></li>
+          <li><span>Pain</span><b>3</b></li>
+          <li><span>Thé</span><b>4</b></li>
+        </ul>
+        <div class="t-foot"><span class="t-time">09:40</span><span class="t-state is-ready">Prêt</span></div>
+      </article>
+    </div>
+    <p class="pass-note">Voilà ce que voit la cuisine : numéro du bon, table, articles, et le temps d'attente.</p>
+  </div>
+
+  <section class="sec" id="work">
+    <div class="wrap">
+      <span class="label">Ce qu'il fait</span>
+      <h2>Une journée entière de service</h2>
+      <p class="sub">De l'ouverture de la salle à la clôture de la caisse. L'étiquette à droite indique où fonctionne chaque partie.</p>
+      <ul class="bill">
+        <li>
+          <b>Commandes et caisse</b>
+          <p>Saisir la commande, gérer les tables et la vente à emporter, le paiement et la facture, puis clôturer la journée.</p>
+          <span class="tag">sur l'appareil</span>
+        </li>
+        <li>
+          <b>Écran de cuisine</b>
+          <p>Le bon arrive au cuisinier dès la saisie, et passe de Nouveau à En cuisson puis Prêt.</p>
+          <span class="tag">réseau local</span>
+        </li>
+        <li>
+          <b>Stock et achats</b>
+          <p>Quantités, matières et fournisseurs, pour savoir ce qui manque avant que la cuisine s'arrête.</p>
+          <span class="tag">sur l'appareil</span>
+        </li>
+        <li>
+          <b>Dépenses et rapports</b>
+          <p>Coûts d'exploitation, ventes du jour et bénéfices, dans des rapports lisibles et imprimables.</p>
+          <span class="tag">sur l'appareil</span>
+        </li>
+        <li>
+          <b>Comptes du personnel</b>
+          <p>Chaque employé a un compte et les droits fixés par le propriétaire, et ne voit rien au-delà de son poste.</p>
+          <span class="tag">réglé par le propriétaire</span>
+        </li>
+        <li>
+          <b>Sauvegarde et restauration</b>
+          <p>Une copie locale toujours, et une copie dans Google Drive si vous choisissez de lier votre compte.</p>
+          <span class="tag">optionnel</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="setup">
+    <div class="wrap">
+      <span class="label">Mise en place</span>
+      <h2>Trois étapes, sans serveur ni abonnement mensuel</h2>
+      <ol class="steps">
+        <li><span class="s-num">01</span><b>Installez Sened sur l'appareil du restaurant</b><span>Cet appareil devient le centre des données : commandes, articles, stock et rapports y résident.</span></li>
+        <li><span class="s-num">02</span><b>Connectez les appareils des serveurs et de la cuisine</b><span>Ils joignent l'appareil du restaurant par le réseau local que vous configurez, pas par internet.</span></li>
+        <li><span class="s-num">03</span><b>Activez la sauvegarde</b><span>Une copie locale suffit pour commencer ; ajoutez une copie Drive quand vous voulez une protection au-delà de l'appareil.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="drive">
+    <div class="wrap">
+      <span class="label">Autorisations Google Drive</span>
+      <h2>Ce que Sened demande à votre compte, et pourquoi</h2>
+      <p class="sub">La liaison est optionnelle et n'est demandée que si vous décidez d'activer la sauvegarde dans le cloud. Sened demande alors la portée la plus étroite qui suffit — rien de plus.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Portée</th><th>Ce qu'elle permet</th><th>Pourquoi Sened en a besoin</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><code>drive.file</code></td>
+              <td>Accès aux seuls fichiers créés par Sened, ou ouverts par l'utilisateur via l'application</td>
+              <td>Envoyer une sauvegarde, lister les sauvegardes précédentes, télécharger celle choisie pour restaurer</td>
+            </tr>
+            <tr>
+              <td>Lecture de vos autres fichiers Drive</td>
+              <td>—</td>
+              <td>Non nécessaire, et non demandée</td>
+            </tr>
+            <tr>
+              <td>Données Google à d'autres fins</td>
+              <td>—</td>
+              <td>Jamais pour la publicité, jamais vendues, jamais transférées, jamais pour entraîner des modèles</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice">
+        <p><strong>À savoir :</strong> un fichier de sauvegarde contient toutes les données du restaurant. Protégez le compte Google par un mot de passe fort et la validation en deux étapes, et ne partagez jamais les liens de sauvegarde. Vous pouvez couper la liaison depuis les réglages à tout moment.</p>
+      </div>
+      <p class="mt"><a href="/fr/privacy.html">Confidentialité</a> · <a href="/fr/security.html">Sécurité</a> · <a href="/fr/terms.html">Conditions</a></p>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap narrow">
+      <span class="label">Questions fréquentes</span>
+      <h2>Ce que demandent les restaurateurs</h2>
+      <div class="faq">
+        <details>
+          <summary>Ai-je besoin d'internet pour faire tourner le restaurant ?</summary>
+          <p>Non. L'exploitation quotidienne se fait sur le réseau local. Internet ne sert qu'à envoyer une sauvegarde vers Google Drive ou à en restaurer une.</p>
+        </details>
+        <details>
+          <summary>Ai-je besoin d'un compte Google ?</summary>
+          <p>Non. Un compte Google ne sert qu'à la sauvegarde dans le cloud. Sans cela, les sauvegardes restent locales.</p>
+        </details>
+        <details>
+          <summary>Où sont stockées les données du restaurant ?</summary>
+          <p>Dans une base de données sur l'appareil que vous contrôlez. Sened n'envoie pas les données de votre restaurant vers un serveur de notre côté ni vers un tiers.</p>
+        </details>
+        <details>
+          <summary>Que se passe-t-il si l'appareil tombe en panne ?</summary>
+          <p>Les données sont restaurées depuis la sauvegarde la plus récente : locale, ou depuis Drive si la liaison est active. Testez une restauration de temps en temps — une sauvegarde non testée n'en est pas une.</p>
+        </details>
+        <details>
+          <summary>Comment supprimer mes données ?</summary>
+          <p>Les données sont sur votre appareil et dans votre compte Drive : vous les supprimez vous-même quand vous voulez. Pour toute demande de confidentialité, écrivez à notre adresse d'assistance.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap narrow">
+      <span class="label">Contact</span>
+      <h2>Une question d'exploitation, ou un signalement de sécurité</h2>
+      <div class="contact">
+        <a href="mailto:support@sened.group">
+          <span class="k">E-mail</span>
+          <span class="t">Assistance, questions et demandes de confidentialité</span>
+          <span class="v">support@sened.group</span>
+        </a>
+        <a href="/fr/security.html">
+          <span class="k">Sécurité</span>
+          <span class="t">Comment les données sont protégées, et comment signaler une faille</span>
+          <span class="v">/fr/security</span>
+        </a>
+        <a href="https://tech.sened.group/fr/">
+          <span class="k">Société</span>
+          <span class="t">Sened Solutions Numériques — logiciels et services</span>
+          <span class="v">tech.sened.group</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p class="copy">© 2026 Sened pour Restaurants — par <a href="https://tech.sened.group/fr/">Sened Solutions Numériques</a></p>
+    <nav class="foot-links" aria-label="Liens du site">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/security.html">Sécurité</a>
+      <a href="/fr/privacy.html">Confidentialité</a>
+      <a href="/fr/terms.html">Conditions</a>
+      <a href="mailto:support@sened.group">support@sened.group</a>
+    </nav>
+    <p class="fine">Sened n'est pas affilié à Google. Google et Google Drive sont des marques de leurs propriétaires respectifs.</p>
+  </div>
+</footer>
+</body>
+</html>

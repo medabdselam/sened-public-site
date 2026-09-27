@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Sécurité | Sened pour Restaurants</title>
+<meta name="description" content="Comment Sened pour Restaurants protège les données : stockage local, moindre privilège sur Google Drive, durcissement de ce site, et signalement des failles.">
+<meta name="theme-color" content="#101410">
+<link rel="canonical" href="https://rst.sened.group/fr/security.html">
+<link rel="alternate" hreflang="ar" href="https://rst.sened.group/security.html">
+<link rel="alternate" hreflang="en" href="https://rst.sened.group/en/security.html">
+<link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/security.html">
+<link rel="alternate" hreflang="x-default" href="https://rst.sened.group/security.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Reem+Kufi:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header id="hd">
+  <div class="hd-in">
+    <a class="brand" href="/fr/"><b>Sened</b><span>pour Restaurants</span></a>
+    <div class="lang" aria-label="Langue">
+      <a href="/security.html" lang="ar" hreflang="ar">ع</a>
+      <a href="/en/security.html" lang="en" hreflang="en">EN</a>
+      <a href="/fr/security.html" aria-current="true" lang="fr" hreflang="fr">FR</a>
+    </div>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/security.html" aria-current="page">Sécurité</a>
+      <a href="/fr/privacy.html">Confidentialité</a>
+      <a href="/fr/terms.html">Conditions</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap narrow document">
+  <h1>Sécurité</h1>
+  <p class="date">Dernière mise à jour : 27 septembre 2026</p>
+  <p>Cette page décrit ce sur quoi repose la sécurité de Sened : où sont conservées les données du restaurant, les limites de ce que l'application demande à un compte Google, comment ce site est construit, et comment nous prévenir si vous trouvez une faille.</p>
+
+  <div class="toc">
+    <p>Sur cette page</p>
+    <ul>
+      <li><a href="#data">Où résident les données et qui les contrôle</a></li>
+      <li><a href="#least">Moindre privilège sur Google Drive</a></li>
+      <li><a href="#site">La sécurité de ce site</a></li>
+      <li><a href="#mail">Adresse d'assistance et usurpation</a></li>
+      <li><a href="#owner">Responsabilités du propriétaire</a></li>
+      <li><a href="#report">Signaler une faille</a></li>
+    </ul>
+  </div>
+
+  <h2 id="data">Où résident les données et qui les contrôle</h2>
+  <p>Les données du restaurant — commandes, articles, stock, dépenses, réglages et comptes du personnel — sont stockées dans une base de données sur l'appareil du restaurant. Aucun serveur intermédiaire de notre côté ne transporte ces données, et l'application n'envoie aucune donnée d'exploitation à un tiers.</p>
+  <ul>
+    <li>Le contrôle complet de l'appareil et de ses utilisateurs reste au propriétaire.</li>
+    <li>Chaque employé dispose d'un compte aux droits définis et n'atteint pas ce que son poste n'exige pas.</li>
+    <li>Les appareils des serveurs et de la cuisine se connectent par le réseau local configuré par le propriétaire, non par internet.</li>
+  </ul>
+
+  <h2 id="least">Moindre privilège sur Google Drive</h2>
+  <p>La sauvegarde dans le cloud est optionnelle. Lorsqu'elle est activée, Sened demande uniquement la portée <code>https://www.googleapis.com/auth/drive.file</code>, la plus étroite qui suffise :</p>
+  <ul>
+    <li>Elle donne accès uniquement aux fichiers créés par Sened — pas au reste de votre Drive.</li>
+    <li>Elle sert à envoyer une sauvegarde de la base, lister les sauvegardes précédentes et télécharger celle choisie pour restaurer.</li>
+    <li>Les données Google ne sont jamais utilisées pour la publicité, jamais vendues, jamais partagées avec des annonceurs, jamais utilisées pour entraîner des modèles.</li>
+  </ul>
+  <p>Le jeton de connexion est conservé sur l'appareil du restaurant dans un stockage protégé fourni par le système d'exploitation ; il n'apparaît jamais sur ce site et ne nous est jamais transmis. Le propriétaire peut couper la liaison depuis les réglages de l'application à tout moment, ou révoquer l'accès depuis la <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer">page des autorisations du compte Google</a>.</p>
+  <div class="notice">
+    <p><strong>À savoir :</strong> un fichier de sauvegarde contient toutes les données du restaurant. Qui détient le fichier détient les données : protéger le compte Google — mot de passe fort et validation en deux étapes — fait partie intégrante de la protection de votre restaurant, et les liens de sauvegarde ne doivent jamais être partagés.</p>
+  </div>
+
+  <h2 id="site">La sécurité de ce site</h2>
+  <p>Ce site est un ensemble de pages statiques d'information et de politiques, conçu pour que sa surface d'attaque soit la plus réduite possible :</p>
+  <ul>
+    <li><strong>HTTPS imposé :</strong> toute requête en <code>http://</code> est redirigée vers <code>https://</code>, et le certificat est géré et renouvelé automatiquement.</li>
+    <li><strong>Aucun JavaScript :</strong> il n'y a pas un seul script sur le site, donc rien à exécuter dans votre navigateur.</li>
+    <li><strong>Politique de contenu stricte :</strong> la source par défaut est <code>'none'</code> ; seules notre feuille de style et nos images, ainsi que Google Fonts, sont autorisées.</li>
+    <li><strong>Aucun traçage, aucun formulaire :</strong> pas d'outils d'analyse ni de cookies de notre part, et aucun champ collectant vos données. Le contact se fait uniquement par e-mail.</li>
+    <li><strong>Référent limité :</strong> <code>strict-origin-when-cross-origin</code>, afin que les chemins de page ne fuitent pas vers d'autres sites.</li>
+  </ul>
+  <p>Ces pages sont hébergées sur <a href="https://docs.github.com/en/pages" rel="noopener noreferrer">GitHub Pages</a>, qui peut traiter des données de visite selon sa propre politique. Les polices sont chargées depuis Google Fonts — la seule connexion externe effectuée par la page. L'hébergement étant statique, certaines protections passent par des en-têtes de service que nous ne contrôlons pas ; c'est aussi pourquoi le site ne contient aucune fonctionnalité manipulant des données d'utilisateurs.</p>
+
+  <h2 id="mail">Adresse d'assistance et usurpation</h2>
+  <p>La seule adresse d'assistance officielle est <a href="mailto:support@sened.group">support@sened.group</a>, une adresse de réception redirigée vers la boîte de l'équipe.</p>
+  <ul>
+    <li>Nous ne vous demandons jamais le mot de passe de votre compte, un code de vérification ou un fichier de sauvegarde par e-mail ou par téléphone.</li>
+    <li>Nous n'envoyons pas de lien de réinitialisation sans votre demande, et ne vous demandons jamais d'installer des logiciels venus d'ailleurs.</li>
+    <li>Si vous recevez un message usurpant le nom de Sened, n'y répondez pas et signalez-le-nous avec les en-têtes complets.</li>
+  </ul>
+
+  <h2 id="owner">Responsabilités du propriétaire</h2>
+  <p>Dans un système qui tourne sur votre appareil, une grande part de la sécurité dépend de vous :</p>
+  <ul>
+    <li>Un compte système protégé par mot de passe sur l'appareil du restaurant, et un écran verrouillé en cas d'absence.</li>
+    <li>Un compte distinct par employé avec le minimum de droits suffisant, supprimé dès son départ.</li>
+    <li>Un réseau local fermé par un mot de passe fort, et l'appareil du restaurant hors du réseau invité.</li>
+    <li>Des sauvegardes régulières <strong>et des restaurations testées</strong> — une sauvegarde non testée n'est pas une sauvegarde.</li>
+    <li>Un système et une application à jour, et une copie conservée hors de l'appareil (disque externe ou Drive).</li>
+  </ul>
+
+  <h2 id="report">Signaler une faille</h2>
+  <p>Si vous trouvez une faille dans l'application ou sur ce site, écrivez à <a href="mailto:support@sened.group">support@sened.group</a> avec « sécurité » en objet. Utile dans votre message : description du problème, étapes pour le reproduire, impact attendu, version ou URL concernée.</p>
+  <ul>
+    <li>Nous accusons réception et travaillons à corriger ce qui est confirmé.</li>
+    <li>Nous vous demandons de ne pas publier les détails avant un correctif, et de ne pas accéder, modifier ou supprimer de données réelles de restaurants pendant vos tests.</li>
+    <li>Merci de ne pas tester de manière à perturber le service, et de ne pas recourir à l'ingénierie sociale envers les utilisateurs de Sened.</li>
+  </ul>
+  <p>Coordonnées lisibles par machine : <a href="/.well-known/security.txt">/.well-known/security.txt</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p class="copy">© 2026 Sened pour Restaurants — par <a href="https://tech.sened.group/fr/">Sened Solutions Numériques</a></p>
+    <nav class="foot-links" aria-label="Liens du site">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/security.html">Sécurité</a>
+      <a href="/fr/privacy.html">Confidentialité</a>
+      <a href="/fr/terms.html">Conditions</a>
+      <a href="mailto:support@sened.group">support@sened.group</a>
+    </nav>
+    <p class="fine">Sened n'est pas affilié à Google. Google et Google Drive sont des marques de leurs propriétaires respectifs.</p>
+  </div>
+</footer>
+</body>
+</html>
