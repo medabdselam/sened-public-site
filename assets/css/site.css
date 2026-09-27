@@ -1,0 +1,233 @@
+/* سند للمطاعم — rst.sened.group
+   الفكرة: الصفحة تفتح على ما يراه المطبخ فعلًا — بونات الطلب على شاشة المرور.
+   ورق فاتح على شاشة داكنة، خط كوفي للعناوين، وأرقام بخط آلة الطباعة.
+   بلا سكربتات. */
+
+:root{
+  /* المطبخ ليلًا */
+  --night:#101410;
+  --steel:#171C16;
+  --rule:#293029;
+  --rule-2:#3A423A;
+  /* الطبشور والورق */
+  --chalk:#F2F0E9;
+  --dim:#98A093;
+  --paper:#F4F2EA;
+  --ink:#14180F;
+  /* حالات البون */
+  --cooking:#E4A03C;
+  --ready:#63A768;
+  --rad:3px;
+  --ar-disp:"Reem Kufi","Noto Kufi Arabic",system-ui,sans-serif;
+  --ar-body:"Alexandria","Noto Sans Arabic",system-ui,sans-serif;
+  --lat-body:"Alexandria","Inter",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+body{
+  margin:0;background:var(--night);color:var(--chalk);
+  font-family:var(--ar-body);font-weight:300;font-size:16.5px;line-height:1.85;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+html[lang="en"] body,html[lang="fr"] body{font-family:var(--lat-body);line-height:1.75}
+img{max-width:100%;display:block}
+a{color:var(--chalk);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:var(--rule-2)}
+a:hover{text-decoration-color:var(--chalk)}
+h1,h2,h3{margin:0;font-family:var(--ar-disp);font-weight:500;line-height:1.3}
+html[lang="en"] h1,html[lang="fr"] h1,
+html[lang="en"] h2,html[lang="fr"] h2,
+html[lang="en"] h3,html[lang="fr"] h3{font-family:var(--lat-body);font-weight:500;letter-spacing:-.01em}
+p{margin:0 0 18px}
+ul,ol{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--cooking);outline-offset:2px}
+::selection{background:var(--cooking);color:var(--ink)}
+
+/* الأرقام واللواحق التقنية بخط آلة الطباعة — ولا يُستعمل لنص عربي أبدًا */
+.mono,code,.t-no,.t-time,.s-num{font-family:var(--mono);font-weight:400;direction:ltr;unicode-bidi:embed}
+code{background:#1D231C;border:1px solid var(--rule);border-radius:var(--rad);padding:1px 6px;font-size:.84em;color:var(--cooking);word-break:break-word}
+
+.wrap{width:min(1180px,100% - 34px);margin-inline:auto}
+.wrap.narrow{width:min(760px,100% - 34px)}
+.skip{position:fixed;top:-100px;inset-inline-start:14px;z-index:300;background:var(--chalk);color:var(--ink);padding:9px 16px;border-radius:var(--rad);text-decoration:none}
+.skip:focus{top:14px}
+
+/* ---------- الرأس ---------- */
+#hd{position:sticky;top:0;z-index:100;background:rgba(16,20,16,.92);border-bottom:1px solid var(--rule);backdrop-filter:blur(10px)}
+.hd-in{width:min(1180px,100% - 34px);margin-inline:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 0}
+.brand{display:flex;align-items:baseline;gap:9px;color:var(--chalk);text-decoration:none;flex:none}
+.brand b{font-family:var(--ar-disp);font-weight:500;font-size:22px;line-height:1}
+html[lang="en"] .brand b,html[lang="fr"] .brand b{font-family:var(--lat-body);font-weight:600;font-size:19px}
+.brand span{font-size:12.5px;color:var(--dim);border-inline-start:1px solid var(--rule-2);padding-inline-start:9px}
+
+.lang{display:flex;gap:1px;margin-inline-start:auto;flex:none;background:var(--rule);border:1px solid var(--rule);border-radius:var(--rad);overflow:hidden}
+.lang a{padding:5px 10px;font-family:var(--mono);font-size:12px;color:var(--dim);background:var(--night);text-decoration:none}
+.lang a:hover{color:var(--chalk)}
+.lang a[aria-current="true"]{background:var(--chalk);color:var(--ink)}
+
+#nav{display:flex;gap:0;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+#nav::-webkit-scrollbar{display:none}
+#nav a{padding:6px 12px;font-size:14.5px;color:var(--dim);white-space:nowrap;text-decoration:none;border-bottom:2px solid transparent}
+#nav a:hover{color:var(--chalk)}
+#nav a[aria-current="page"]{color:var(--chalk);border-bottom-color:var(--cooking)}
+
+/* ---------- المقدمة: شاشة المرور ---------- */
+.hero{padding:44px 0 0}
+.hero h1{font-size:clamp(29px,7.2vw,54px);max-width:16ch;margin-bottom:18px}
+.hero .lead{color:var(--dim);font-size:clamp(15.5px,2vw,18px);max-width:52ch;margin-bottom:26px}
+.keys{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.key{
+  display:inline-block;padding:12px 22px;border:1px solid var(--rule-2);border-radius:var(--rad);
+  font-family:inherit;font-size:15px;color:var(--chalk);text-decoration:none;background:transparent;
+}
+.key:hover{border-color:var(--chalk)}
+.key:active{transform:translateY(1px)}
+.key-1{background:var(--chalk);border-color:var(--chalk);color:var(--ink);font-weight:500}
+.key-1:hover{background:#fff;border-color:#fff}
+
+/* رفّ البونات */
+.pass{
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(232px,1fr);gap:12px;
+  overflow-x:auto;padding:0 0 14px;scroll-snap-type:x mandatory;scrollbar-width:none;
+  margin-bottom:8px;
+}
+.pass::-webkit-scrollbar{display:none}
+.ticket{
+  scroll-snap-align:start;background:var(--paper);color:var(--ink);
+  border-radius:var(--rad);padding:13px 15px 12px;font-size:14px;line-height:1.7;
+  box-shadow:0 10px 26px rgba(0,0,0,.45);
+}
+.t-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.t-no{font-size:15px;font-weight:600}
+.t-table{font-size:13px;color:#5C6353}
+.t-lines{margin:9px 0;padding:9px 0;border-block:1px dashed #C9C6B8;display:grid;gap:4px}
+.t-lines li{display:flex;justify-content:space-between;gap:12px}
+.t-lines b{font-family:var(--mono);font-weight:500;color:#5C6353}
+.t-foot{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.t-time{font-size:12.5px;color:#5C6353}
+.t-state{font-size:12px;padding:2px 9px;border-radius:999px;border:1px solid currentColor}
+.is-new{color:#5C6353}
+.is-cooking{color:#9A6708;background:rgba(228,160,60,.22);border-color:rgba(154,103,8,.4)}
+.is-ready{color:#2F6B37;background:rgba(99,167,104,.22);border-color:rgba(47,107,55,.4)}
+.pass-note{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin:0 0 40px}
+/* لا يُستعمل خط آلة الطباعة اللاتيني لنص عربي — لا حروف عربية فيه */
+html[lang="ar"] .pass-note,html[lang="ar"] .bill .tag{font-family:var(--ar-body);font-size:12.5px}
+
+/* ---------- الأقسام ---------- */
+.sec{padding:52px 0;border-top:1px solid var(--rule)}
+.label{display:block;font-family:var(--mono);font-size:11.5px;color:var(--cooking);margin-bottom:12px}
+html[lang="ar"] .label{font-family:var(--ar-body);font-size:13px}
+.sec h2{font-size:clamp(22px,4.2vw,32px);margin-bottom:14px;max-width:22ch}
+.sub{color:var(--dim);max-width:60ch;margin-bottom:30px}
+
+/* قائمة بأسلوب الفاتورة: اسم ..... قيمة */
+.bill{display:grid;gap:0;border-top:1px solid var(--rule)}
+.bill li{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:10px 16px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.bill b{font-family:var(--ar-disp);font-weight:500;font-size:17.5px;color:var(--chalk)}
+html[lang="en"] .bill b,html[lang="fr"] .bill b{font-family:var(--lat-body);font-weight:600;font-size:16.5px}
+.bill .tag{font-family:var(--mono);font-size:11.5px;color:var(--dim);border:1px solid var(--rule-2);border-radius:var(--rad);padding:2px 8px;white-space:nowrap;justify-self:end}
+.bill p{grid-column:1 / -1;margin:5px 0 0;color:var(--dim);font-size:15px}
+
+/* خطوات حقيقية متسلسلة — الرقم هنا يعني ترتيبًا */
+.steps{display:grid;gap:0;border-top:1px solid var(--rule)}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.s-num{color:var(--cooking);font-size:13px;padding-top:4px}
+.steps b{font-family:var(--ar-disp);font-weight:500;font-size:17.5px}
+html[lang="en"] .steps b,html[lang="fr"] .steps b{font-family:var(--lat-body);font-weight:600;font-size:16.5px}
+.steps span{grid-column:2;color:var(--dim);font-size:15px}
+
+/* جدول الصلاحيات */
+.tablewrap{overflow-x:auto;border-top:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:15px}
+th,td{padding:14px 16px 14px 0;text-align:start;border-bottom:1px solid var(--rule);vertical-align:top}
+th:last-child,td:last-child{padding-inline-end:0}
+thead th{font-family:var(--mono);font-size:11.5px;font-weight:400;color:var(--dim)}
+html[lang="ar"] thead th{font-family:var(--ar-body);font-size:13px}
+td{color:var(--dim)}
+
+/* تنبيه */
+.notice{border:1px solid var(--rule-2);border-inline-start:2px solid var(--cooking);border-radius:var(--rad);padding:16px 18px;margin-top:26px}
+.notice p{margin:0;font-size:15px;color:var(--chalk)}
+.notice strong{color:var(--cooking);font-weight:400}
+
+/* الأسئلة */
+.faq{border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;cursor:pointer;list-style:none;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--cooking)}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--cooking);font-size:16px;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0;padding:0 0 18px;color:var(--dim);font-size:15px;max-width:62ch}
+
+/* التواصل */
+.contact{display:grid;gap:0;border-top:1px solid var(--rule)}
+.contact a{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:16px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--chalk)}
+.contact a:hover{color:var(--cooking)}
+.contact .k{font-family:var(--mono);font-size:11.5px;color:var(--dim);padding-top:4px}
+html[lang="ar"] .contact .k{font-family:var(--ar-body);font-size:13px}
+.contact .v{font-family:var(--mono);font-size:15.5px}
+.contact .t{grid-column:2;color:var(--dim);font-size:14.5px}
+
+/* ---------- الوثائق ---------- */
+.document{padding:40px 0 64px}
+.document h1{font-size:clamp(26px,5.6vw,40px);margin-bottom:6px}
+.document .date{font-family:var(--mono);font-size:12px;color:var(--dim);margin-bottom:26px}
+.document h2{font-size:clamp(18.5px,3vw,23px);margin:36px 0 10px;padding-top:18px;border-top:1px solid var(--rule)}
+.document h3{font-size:17px;margin:24px 0 8px}
+.document p,.document li{color:var(--dim);font-size:16px}
+.document strong{color:var(--chalk);font-weight:400}
+.document ul{display:grid;gap:9px;margin:0 0 18px}
+.document ul li{position:relative;padding-inline-start:18px}
+.document ul li::before{content:"";position:absolute;inset-inline-start:0;top:.92em;width:7px;height:1px;background:var(--cooking)}
+.toc{border:1px solid var(--rule);border-radius:var(--rad);padding:16px 18px;margin-bottom:30px}
+.toc p{margin:0 0 9px;font-size:13px;color:var(--dim)}
+.toc ul{display:grid;gap:7px;margin:0}
+.toc a{font-size:15px}
+
+/* 404 */
+.void{padding:80px 0 100px}
+.void h1{font-size:clamp(26px,6vw,42px);margin-bottom:12px}
+.void p{color:var(--dim)}
+
+/* ---------- الذيل ---------- */
+footer{border-top:1px dashed var(--rule-2);padding:24px 0 34px;color:var(--dim);font-size:14px}
+.foot{display:grid;gap:12px}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 16px}
+.foot-links a{color:var(--dim);font-size:13.5px;text-decoration:none}
+.foot-links a:hover{color:var(--chalk);text-decoration:underline}
+.foot .fine{font-family:var(--mono);font-size:11px;color:#6E7569;margin:0;max-width:70ch;line-height:1.7}
+html[lang="ar"] .foot .fine{font-family:var(--ar-body);font-size:12px}
+
+/* الأدوات */
+.copy{margin:0}
+.mt{margin-top:20px}
+.mt-lg{margin-top:32px}
+.en-block{direction:ltr;text-align:left;font-family:var(--lat-body)}
+.en-block h2{font-family:var(--lat-body);font-weight:600}
+.en-block p{color:var(--dim)}
+
+@media (min-width:760px){
+  .hero{padding-top:58px}
+  .hd-in{padding:12px 0;gap:18px}
+  .pass{grid-auto-columns:minmax(250px,1fr);gap:14px}
+  .sec{padding:64px 0}
+  .bill li{grid-template-columns:minmax(0,22ch) 1fr auto;align-items:baseline}
+  .bill p{grid-column:2;margin:0}
+  .bill .tag{grid-column:3}
+  .contact a{grid-template-columns:minmax(0,12ch) 1fr auto}
+  .contact .t{grid-column:2;justify-self:start}
+  .contact .v{grid-column:3;justify-self:end}
+  .foot{grid-template-columns:1fr auto;align-items:center}
+  .foot .fine{grid-column:1 / -1}
+}
+@media (max-width:759px){
+  #nav{order:3;width:100%;padding-top:2px}
+  .lang{order:2}
+  .key{flex:1 1 auto;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+}
