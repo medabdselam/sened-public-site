@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>الأمان | سند للمطاعم</title>
+<meta name="description" content="كيف يحمي سند للمطاعم بيانات المطعم: التخزين المحلي، أقل صلاحية ممكنة في Google Drive، أمان هذا الموقع، وكيفية الإبلاغ عن ثغرة.">
+<meta name="theme-color" content="#101410">
+<link rel="canonical" href="https://rst.sened.group/security.html">
+<link rel="alternate" hreflang="ar" href="https://rst.sened.group/security.html">
+<link rel="alternate" hreflang="en" href="https://rst.sened.group/en/security.html">
+<link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/security.html">
+<link rel="alternate" hreflang="x-default" href="https://rst.sened.group/security.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Reem+Kufi:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">تجاوز إلى المحتوى</a>
+
+<header id="hd">
+  <div class="hd-in">
+    <a class="brand" href="/"><b>سند</b><span>للمطاعم</span></a>
+    <div class="lang" aria-label="اللغة">
+      <a href="/security.html" aria-current="true" lang="ar" hreflang="ar">ع</a>
+      <a href="/en/security.html" lang="en" hreflang="en">EN</a>
+      <a href="/fr/security.html" lang="fr" hreflang="fr">FR</a>
+    </div>
+    <nav id="nav" aria-label="التنقل الرئيسي">
+      <a href="/">الرئيسية</a>
+      <a href="/security.html" aria-current="page">الأمان</a>
+      <a href="/privacy.html">الخصوصية</a>
+      <a href="/terms.html">الشروط</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap narrow document">
+  <h1>الأمان</h1>
+  <p class="date">آخر تحديث: 27 سبتمبر 2026</p>
+  <p>تشرح هذه الصفحة الإجراءات التي يقوم عليها أمان سند للمطاعم: كيف تُحفظ بيانات المطعم، وما حدود ما يطلبه التطبيق من حساب Google، وكيف بُني هذا الموقع، وكيف تُبلغنا إن وجدت ثغرة.</p>
+
+  <div class="toc">
+    <p>محتويات الصفحة</p>
+    <ul>
+      <li><a href="#data">مكان البيانات ومن يتحكم فيها</a></li>
+      <li><a href="#least">أقل صلاحية ممكنة في Google Drive</a></li>
+      <li><a href="#site">أمان هذا الموقع</a></li>
+      <li><a href="#mail">بريد الدعم وانتحال الهوية</a></li>
+      <li><a href="#owner">مسؤوليات مالك المطعم</a></li>
+      <li><a href="#report">الإبلاغ عن ثغرة</a></li>
+    </ul>
+  </div>
+
+  <h2 id="data">مكان البيانات ومن يتحكم فيها</h2>
+  <p>تُخزَّن بيانات المطعم — الطلبات والأصناف والمخزون والمصاريف والإعدادات وحسابات العاملين — في قاعدة بيانات على جهاز المطعم. لا يوجد خادم وسيط تابع لنا تمر عليه هذه البيانات، ولا يرسل التطبيق بيانات تشغيل المطعم إلى أي طرف ثالث.</p>
+  <ul>
+    <li>التحكم الكامل في الجهاز وفي من يستخدمه بيد مالك المطعم.</li>
+    <li>لكل عامل حساب بصلاحيات محدّدة، فلا يصل إلى ما لا يلزم عمله.</li>
+    <li>أجهزة النادل والمطبخ تتصل عبر الشبكة المحلية التي يضبطها المالك، لا عبر الإنترنت.</li>
+  </ul>
+
+  <h2 id="least">أقل صلاحية ممكنة في Google Drive</h2>
+  <p>النسخ الاحتياطي السحابي اختياري. وعند تفعيله يطلب سند صلاحية <code>https://www.googleapis.com/auth/drive.file</code> فقط، وهي أضيق صلاحية تكفي للمهمة:</p>
+  <ul>
+    <li>تسمح بالوصول إلى الملفات التي أنشأها سند نفسه فقط — لا إلى بقية ملفات حسابك في Drive.</li>
+    <li>تُستخدم لرفع نسخة قاعدة البيانات، وعرض النسخ السابقة، وتنزيل نسخة مختارة لاستعادتها.</li>
+    <li>لا تُستخدم بيانات Google للإعلانات ولا تُباع ولا تُشارك مع معلنين ولا تُستخدم لتدريب نماذج.</li>
+  </ul>
+  <p>يُحفظ رمز الاتصال (token) على جهاز المطعم في تخزين محمي يوفّره نظام التشغيل، ولا يظهر في هذا الموقع ولا يُرسل إلينا. ويمكن للمالك قطع الربط من إعدادات التطبيق في أي وقت، أو إلغاء الوصول من <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer">صفحة صلاحيات حساب Google</a>.</p>
+  <div class="notice">
+    <p><strong>ما يجب أن تعرفه:</strong> ملف النسخة الاحتياطية يحتوي بيانات المطعم كاملة. ومن يملك الملف يملك البيانات، لذا حماية حساب Google — كلمة مرور قوية وتحقق بخطوتين — جزء أساسي من حماية مطعمك، ولا تُشارك روابط النسخ مع أحد.</p>
+  </div>
+
+  <h2 id="site">أمان هذا الموقع</h2>
+  <p>هذا الموقع صفحات ثابتة للتعريف والسياسات فقط، بُني بحيث تكون مساحة الخطر فيه أصغر ما يمكن:</p>
+  <ul>
+    <li><strong>HTTPS إلزامي:</strong> كل طلب على <code>http://</code> يُحوَّل إلى <code>https://</code>، والشهادة تُدار وتُجدَّد آليًا.</li>
+    <li><strong>لا شيفرة JavaScript:</strong> لا يوجد سكربت واحد في الموقع، فلا محل لتنفيذ شيفرة في متصفحك.</li>
+    <li><strong>سياسة محتوى صارمة (CSP):</strong> الأصل الافتراضي <code>'none'</code>، ولا يُسمح إلا بملف التنسيق والصور من النطاق نفسه وخطوط Google Fonts.</li>
+    <li><strong>لا تتبّع ولا نماذج:</strong> لا أدوات تحليلات ولا كوكيز نضعها، ولا حقول تجمع بياناتك. التواصل عبر البريد فقط.</li>
+    <li><strong>إحالة محدودة:</strong> <code>strict-origin-when-cross-origin</code> فلا يُسرَّب مسار الصفحة إلى مواقع أخرى.</li>
+  </ul>
+  <p>تستضيف <a href="https://docs.github.com/en/pages" rel="noopener noreferrer">GitHub Pages</a> هذه الصفحات، وقد تعالج بيانات الزيارة وفق سياستها. وتُحمَّل الخطوط من Google Fonts، وهو الاتصال الخارجي الوحيد الذي تُجريه الصفحة. وبما أن الاستضافة ثابتة، فبعض الحمايات تُفرض عبر ترويسات الخدمة ولا نتحكم فيها من صفحاتنا؛ ولهذا لا يحتوي الموقع على أي وظيفة تتعامل مع بيانات المستخدمين أصلًا.</p>
+
+  <h2 id="mail">بريد الدعم وانتحال الهوية</h2>
+  <p>عنوان الدعم الرسمي الوحيد هو <a href="mailto:support@sened.group">support@sened.group</a>، وهو عنوان استقبال يُحوَّل إلى صندوق الفريق.</p>
+  <ul>
+    <li>لا نطلب منك كلمة مرور حسابك، ولا رمز تحقق، ولا ملف نسخة احتياطية عبر البريد أو الهاتف.</li>
+    <li>لا نرسل روابط لتغيير كلمة المرور إلا إن طلبتها بنفسك، ولا نطلب تنصيب برامج من مصادر أخرى.</li>
+    <li>إن وصلتك رسالة تنتحل اسم سند، لا تستجب لها وأبلغنا بها مع ترويسة الرسالة كاملة.</li>
+  </ul>
+
+  <h2 id="owner">مسؤوليات مالك المطعم</h2>
+  <p>جزء كبير من الأمان في نظام يعمل على جهازك يعتمد عليك:</p>
+  <ul>
+    <li>حساب نظام تشغيل بكلمة مرور على جهاز المطعم، وقفل الشاشة عند الترك.</li>
+    <li>حساب منفصل لكل عامل بأدنى صلاحية تكفيه، وإلغاء حساب من يترك العمل فورًا.</li>
+    <li>شبكة محلية مغلقة بكلمة مرور قوية، وعدم وضع جهاز المطعم على شبكة الزوار.</li>
+    <li>نسخ احتياطية دورية <strong>واختبار استعادتها</strong> — النسخة التي لم تُختبر ليست نسخة.</li>
+    <li>تحديث نظام التشغيل والتطبيق، والاحتفاظ بنسخة خارج الجهاز (قرص خارجي أو Drive).</li>
+  </ul>
+
+  <h2 id="report">الإبلاغ عن ثغرة</h2>
+  <p>إن وجدت ثغرة في التطبيق أو في هذا الموقع، راسلنا على <a href="mailto:support@sened.group">support@sened.group</a> وضع في العنوان كلمة «أمان». ويفيدنا في رسالتك: وصف الثغرة، وخطوات إظهارها، والأثر المتوقع، والإصدار أو الرابط المعني.</p>
+  <ul>
+    <li>نؤكد استلام رسالتك، ونعمل على إصلاح ما يثبت منها.</li>
+    <li>نطلب منك ألا تنشر التفاصيل قبل الإصلاح، وألا تصل إلى بيانات مطاعم حقيقية أو تعدّلها أو تحذفها أثناء الاختبار.</li>
+    <li>لا تختبر بطرق تُعطّل الخدمة، ولا تستخدم الهندسة الاجتماعية على مستخدمي سند.</li>
+  </ul>
+  <p>تفاصيل التواصل الآلية في <a href="/.well-known/security.txt">/.well-known/security.txt</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p class="copy">© 2026 سند للمطاعم — من <a href="https://tech.sened.group/">سند للحلول الرقمية</a></p>
+    <nav class="foot-links" aria-label="روابط الموقع">
+      <a href="/">الرئيسية</a>
+      <a href="/security.html">الأمان</a>
+      <a href="/privacy.html">الخصوصية</a>
+      <a href="/terms.html">الشروط</a>
+      <a href="mailto:support@sened.group">support@sened.group</a>
+    </nav>
+    <p class="fine">سند غير تابع لشركة Google. أسماء Google و Google Drive علامات تجارية لأصحابها.</p>
+  </div>
+</footer>
+</body>
+</html>

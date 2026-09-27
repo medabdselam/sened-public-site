@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://rst.sened.group/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rst.sened.group/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rst.sened.group/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rst.sened.group/"/>
+  </url>
+  <url>
+    <loc>https://rst.sened.group/en/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rst.sened.group/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rst.sened.group/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rst.sened.group/"/>
+  </url>
+  <url>
+    <loc>https://rst.sened.group/fr/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rst.sened.group/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rst.sened.group/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rst.sened.group/"/>
+  </url>
+
+  <url>
+    <loc>https://rst.sened.group/privacy.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rst.sened.group/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rst.sened.group/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rst.sened.group/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://rst.sened.group/en/privacy.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rst.sened.group/fr/privacy.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rst.sened.group/terms.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rst.sened.group/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rst.sened.group/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rst.sened.group/terms.html"/>
+  </url>
+  <url>
+    <loc>https://rst.sened.group/en/terms.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rst.sened.group/fr/terms.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rst.sened.group/security.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rst.sened.group/security.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rst.sened.group/en/security.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/security.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rst.sened.group/security.html"/>
+  </url>
+  <url>
+    <loc>https://rst.sened.group/en/security.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rst.sened.group/fr/security.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+
+</urlset>
