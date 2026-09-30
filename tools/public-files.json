@@ -1,0 +1,20 @@
+[
+  ".well-known/security.txt",
+  "404.html",
+  "CNAME",
+  "assets/css/site.css",
+  "en/index.html",
+  "en/privacy.html",
+  "en/security.html",
+  "en/terms.html",
+  "fr/index.html",
+  "fr/privacy.html",
+  "fr/security.html",
+  "fr/terms.html",
+  "index.html",
+  "privacy.html",
+  "robots.txt",
+  "security.html",
+  "sitemap.xml",
+  "terms.html"
+]
