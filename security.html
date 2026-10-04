@@ -80,12 +80,15 @@
   <p>This site is a set of static pages for information and policies only, built so that its attack surface is as small as possible:</p>
   <ul>
     <li><strong>HTTPS enforced:</strong> every <code>http://</code> request is redirected to <code>https://</code>, and the certificate is managed and renewed automatically.</li>
-    <li><strong>No JavaScript:</strong> there is not a single script on the site, so there is nothing to execute in your browser.</li>
-    <li><strong>Strict Content Security Policy:</strong> the default source is <code>'none'</code>; only our own stylesheet and images, plus Google Fonts, are allowed.</li>
+    <li><strong>One script, and not ours:</strong> we have not written a single line of JavaScript into these pages. The only script that reaches your browser is injected by Cloudflare on every page containing an email address (<code>/cdn-cgi/…/email-decode.min.js</code>); its stated job is to hide the address from harvesting bots and decode it again for display. It is served from our own domain, and you can read it yourself. (The Arabic home page carries one more <code>script</code> tag, of type <code>application/ld+json</code>: search-engine metadata, not code that runs.)</li>
+    <li><strong>Strict Content Security Policy:</strong> the default source is <code>'none'</code>; only stylesheets, images and scripts from our own domain, plus Google Fonts, are allowed. No third-party code can run.</li>
     <li><strong>No tracking, no forms:</strong> no analytics and no cookies of ours, and no fields that collect your data. Contact is by email only.</li>
     <li><strong>Limited referrer:</strong> <code>strict-origin-when-cross-origin</code>, so page paths are not leaked to other sites.</li>
   </ul>
   <p>These pages are hosted on <a href="https://docs.github.com/en/pages" rel="noopener noreferrer">GitHub Pages</a>, which may process visit data under its own policy. Fonts are loaded from Google Fonts — the only external connection the page makes. Because the hosting is static, some protections are applied through service headers we do not control; this is also why the site contains no functionality that handles user data at all.</p>
+  <div class="notice">
+    <p><strong>If you keep JavaScript disabled:</strong> email addresses on this site will read <code>[email&#160;protected]</code> instead of the address, because Cloudflare's script is what decodes them. Write to us at <span class="mono" dir="ltr">contact [at] sened.group</span> instead.</p>
+  </div>
 
   <h2 id="mail">Support email and impersonation</h2>
   <p>The only official support address is <a href="mailto:contact@sened.group">contact@sened.group</a>, a receiving address forwarded to the team's mailbox.</p>
