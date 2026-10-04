@@ -6,11 +6,11 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Politique de confidentialité | Sened pour Restaurants</title>
-<meta name="description" content="Politique de confidentialité de Sened pour Restaurants : les données du restaurant restent sur son appareil ; la sauvegarde Google Drive est optionnelle et n'utilise que la portée drive.file.">
+<meta name="description" content="Politique de confidentialité de Sened pour Restaurants : les données du restaurant restent sur son appareil, sans serveur de notre côté, sans revente ni publicité ; la sauvegarde Google Drive est optionnelle, n'utilise que la portée drive.file et porte la déclaration d'usage limité.">
 <meta name="theme-color" content="#101410">
 <link rel="canonical" href="https://rst.sened.group/fr/privacy.html">
-<link rel="alternate" hreflang="ar" href="https://rst.sened.group/privacy.html">
-<link rel="alternate" hreflang="en" href="https://rst.sened.group/en/privacy.html">
+<link rel="alternate" hreflang="ar" href="https://rst.sened.group/ar/privacy.html">
+<link rel="alternate" hreflang="en" href="https://rst.sened.group/privacy.html">
 <link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/privacy.html">
 <link rel="alternate" hreflang="x-default" href="https://rst.sened.group/privacy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +24,10 @@
 <header id="hd">
   <div class="hd-in">
     <a class="brand" href="/fr/"><b>Sened</b><span>pour Restaurants</span></a>
+    <span class="lang-hint" aria-hidden="true">Langue</span>
     <div class="lang" aria-label="Langue">
-      <a href="/privacy.html" lang="ar" hreflang="ar">ع</a>
-      <a href="/en/privacy.html" lang="en" hreflang="en">EN</a>
+      <a href="/ar/privacy.html" lang="ar" hreflang="ar">ع</a>
+      <a href="/privacy.html" lang="en" hreflang="en">EN</a>
       <a href="/fr/privacy.html" aria-current="true" lang="fr" hreflang="fr">FR</a>
     </div>
     <nav id="nav" aria-label="Navigation principale">
@@ -40,41 +41,91 @@
 
 <main id="main" class="wrap narrow document">
   <h1>Politique de confidentialité</h1>
-  <p class="date">Dernière mise à jour : 27 septembre 2026</p>
-  <p>Cette page explique comment l'application Sened pour Restaurants traite les données du restaurant, en particulier lorsque la sauvegarde optionnelle vers Google Drive est activée. Elle s'applique à l'application de bureau et à ce site.</p>
+  <p class="date">Dernière mise à jour : 4 octobre 2026</p>
+  <p>Cette politique explique quelles données <strong>Sened pour Restaurants</strong> traite, où elles sont conservées et qui peut y accéder. Elle couvre l'application de bureau et les pages de ce site. Elle est écrite simplement, parce que celui qui achète un système pour gérer son restaurant a le droit de savoir exactement où vont ses données avant de payer.</p>
+
+  <div class="notice">
+    <p><strong>En bref :</strong> les données de votre restaurant résident sur votre propre appareil. Aucun serveur de notre côté ne les voit passer, aucun compte à créer chez nous, aucun abonnement dont dépend votre service. La seule connexion vers l'extérieur est une sauvegarde vers votre propre Google Drive — optionnelle, activée par vous, interrompue quand vous le voulez.</p>
+  </div>
 
   <div class="toc">
     <p>Sur cette page</p>
     <ul>
-      <li><a href="#data">Données du restaurant</a></li>
-      <li><a href="#drive">Google Drive — accès et usage</a></li>
-      <li><a href="#store">Stockage et partage</a></li>
-      <li><a href="#control">Contrôle et suppression</a></li>
-      <li><a href="#site">Diagnostics et ce site</a></li>
-      <li><a href="#contact">Contact et mises à jour</a></li>
+      <li><a href="#who">Qui est responsable de cette politique</a></li>
+      <li><a href="#data">Données du restaurant : ce qui est enregistré, et où</a></li>
+      <li><a href="#never">Ce que nous ne faisons jamais de vos données</a></li>
+      <li><a href="#drive">Google Drive : la portée et l'usage limité</a></li>
+      <li><a href="#retention">Conservation et suppression</a></li>
+      <li><a href="#rights">Votre contrôle et les droits de vos clients</a></li>
+      <li><a href="#secure">Comment les données sont protégées</a></li>
+      <li><a href="#site">Ce site</a></li>
+      <li><a href="#changes">Modifications et contact</a></li>
     </ul>
   </div>
 
-  <h2 id="data">Données du restaurant</h2>
-  <p>Sened enregistre les commandes, les produits, le stock, les dépenses, les réglages et les comptes du personnel dans une base de données sur l'appareil du restaurant. Les appareils des serveurs et de la cuisine peuvent y accéder par le réseau local configuré par le propriétaire, qui contrôle l'appareil, les droits du personnel et les sauvegardes.</p>
-  <p>Aucun serveur de notre côté ne reçoit les données du restaurant ; nous ne les consultons pas, ne les vendons pas et ne les partageons pas avec des annonceurs.</p>
+  <h2 id="who">Qui est responsable de cette politique</h2>
+  <p>Sened pour Restaurants est un produit de <a href="https://tech.sened.group/fr/">Sened Solutions Numériques</a>, Nouakchott, Mauritanie. Les questions de confidentialité s'adressent à <a href="mailto:contact@sened.group">contact@sened.group</a>.</p>
+  <p>Deux rôles comptent ici. Le <strong>propriétaire du restaurant</strong> décide quelles données entrent dans le système et pourquoi, et en répond devant ses clients et selon les règles qui lui sont applicables. Nous sommes le <strong>fournisseur du logiciel</strong> : nous livrons l'application et corrigeons ses défauts, sans exploiter de service par lequel transiteraient les données de votre restaurant. Comme l'application tourne sur l'appareil du restaurant, en usage normal nous ne voyons rien de ces données.</p>
 
-  <h2 id="drive">Google Drive — accès et usage</h2>
-  <p>Sened ne demande pas la liaison à Google Drive à moins que le propriétaire ne le choisisse. L'application utilise la portée <code>https://www.googleapis.com/auth/drive.file</code> pour créer le dossier et les fichiers de sauvegarde propres à Sened dans le compte Google lié, puis pour retrouver ces sauvegardes, les lister et télécharger celle qui est choisie afin de restaurer la base de données.</p>
-  <p>Une sauvegarde peut contenir toutes les données du restaurant, y compris les commandes, les clients, les réglages et les comptes utilisateurs. Sened n'utilise pas cette portée pour lire des fichiers Drive sans lien avec l'application, n'utilise pas les données Google à des fins publicitaires, ne les transfère pas à des tiers et ne s'en sert pas pour entraîner des modèles.</p>
+  <h2 id="data">Données du restaurant : ce qui est enregistré, et où</h2>
+  <p>Sened conserve, dans une seule base de données sur l'appareil du restaurant :</p>
+  <ul>
+    <li><strong>L'exploitation :</strong> les commandes avec leurs articles, leurs heures et leurs états ; les tables et les niveaux ; les factures, les paiements et la clôture de la journée.</li>
+    <li><strong>La carte et le stock :</strong> le menu et ses prix ; les matières, les quantités et les seuils d'alerte ; les achats, les fournisseurs et les dépenses.</li>
+    <li><strong>Le personnel :</strong> nom du compte, adresse interne, rôle et droits, le mot de passe étant stocké sous forme d'empreinte non réversible.</li>
+    <li><strong>Les clients — seulement si vous choisissez de les enregistrer :</strong> ce que vous ou votre personnel saisissez, comme un nom et un numéro pour la livraison ou un programme de fidélité. Sened ne demande pas ces données et n'en a pas besoin pour fonctionner.</li>
+    <li><strong>Les réglages :</strong> informations de l'établissement, devise, taxe, imprimantes et configuration du réseau local.</li>
+  </ul>
+  <p>Les appareils des serveurs et de la cuisine accèdent à ces données par le réseau local configuré par le propriétaire, pas par internet. Le contrôle de l'appareil et des droits de chaque employé reste au propriétaire seul.</p>
 
-  <h2 id="store">Stockage et partage</h2>
-  <p>La base de données principale reste sur l'appareil du restaurant. Lorsque la sauvegarde Drive est activée, une copie est transférée vers le compte Google du propriétaire et relève alors aussi des politiques de Google. Sened conserve le jeton de connexion sur l'appareil dans un stockage protégé fourni par le système d'exploitation ; ce site n'affiche jamais de données du restaurant ni de jeton d'accès.</p>
+  <h2 id="never">Ce que nous ne faisons jamais de vos données</h2>
+  <ul>
+    <li><strong>Nous ne les collectons pas :</strong> Sened n'envoie pas les données d'exploitation de votre restaurant vers un serveur à nous — un tel serveur n'existe pas.</li>
+    <li><strong>Nous ne les vendons ni ne les louons</strong> à personne, et ne les partageons avec aucun courtier en données ni annonceur.</li>
+    <li><strong>Nous ne les utilisons pas à des fins publicitaires</strong> ni pour établir des profils de vous ou de vos clients.</li>
+    <li><strong>Nous ne les utilisons pas pour entraîner des modèles d'IA</strong>, ni les nôtres ni ceux d'autrui.</li>
+    <li><strong>Nous ne suivons pas votre usage :</strong> cette édition de Sened n'envoie ni télémétrie ni statistiques à qui que ce soit.</li>
+  </ul>
 
-  <h2 id="control">Contrôle et suppression</h2>
-  <p>Le propriétaire peut couper la liaison Google Drive depuis les réglages de Sened pour arrêter tout accès futur, ou révoquer l'accès depuis la <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer">page des autorisations du compte Google</a>. Couper la liaison ne supprime pas automatiquement les sauvegardes déjà créées ; elles peuvent être gérées ou supprimées dans Google Drive.</p>
-  <p>Le propriétaire peut choisir une sauvegarde à restaurer dans l'application, en prenant une copie de sécurité locale avant remplacement. Pour supprimer les données de l'appareil du restaurant, il gère lui-même la base et les copies locales. Pour toute question ou demande de confidentialité, écrivez à l'adresse d'assistance ci-dessous.</p>
+  <h2 id="drive">Google Drive : la portée et l'usage limité</h2>
+  <p>La sauvegarde vers Google Drive est une <strong>fonction optionnelle</strong>. Elle n'est ni demandée ni active tant que le propriétaire n'a pas appuyé lui-même sur le bouton de liaison. Sened demande alors une seule portée :</p>
+  <p><code>https://www.googleapis.com/auth/drive.file</code></p>
+  <p>C'est la portée la plus étroite qui remplisse la fonction : elle ne donne accès qu'aux fichiers que Sened a lui-même créés dans votre compte. L'application s'en sert pour trois choses et pas une de plus — téléverser le fichier de sauvegarde, lister les sauvegardes qu'elle a créées, et télécharger celle que vous avez choisie pour la restaurer. Le reste de votre Drive n'est pas visible par Sened et ne peut pas l'être, parce que la portée elle-même ne le permet pas.</p>
+  <p>Lors de la connexion avec un compte Google, Sened reçoit également <code>openid</code>, <code>email</code> et <code>profile</code>, et s'en sert uniquement pour afficher dans l'application quel compte est lié.</p>
+  <p>Un fichier de sauvegarde contient l'ensemble des données de votre restaurant, et va de votre appareil vers votre propre compte Google directement, sans passer par nous. Une fois là, il relève aussi des conditions et de la politique de confidentialité de Google.</p>
+  <div class="notice">
+    <p><strong>Déclaration d'usage limité :</strong> l'utilisation et le transfert par Sened des informations reçues des API Google vers toute autre application respectent la <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener noreferrer">politique relative aux données utilisateur des services d'API Google</a>, y compris les exigences d'usage limité (Limited Use).</p>
+  </div>
+  <p lang="en" dir="ltr" class="legal-en">Sened's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
-  <h2 id="site">Diagnostics et ce site</h2>
-  <p>Cette édition de Sened n'envoie aucune mesure d'usage à l'éditeur d'origine. Ce site public est hébergé par GitHub Pages, qui peut traiter des données de visite selon la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">déclaration de confidentialité de GitHub</a>. Nos pages ne contiennent aucun traceur, aucun cookie de notre part et aucun formulaire de collecte, et n'exécutent aucun JavaScript ; les polices sont chargées depuis Google Fonts. Les détails techniques figurent sur la <a href="/fr/security.html">page Sécurité</a>.</p>
+  <h2 id="retention">Conservation et suppression</h2>
+  <ul>
+    <li><strong>Sur votre appareil :</strong> les données restent tant que la base est sur l'appareil. Nous n'imposons aucune durée et ne supprimons rien — le fichier est le vôtre.</li>
+    <li><strong>Dans Drive :</strong> les sauvegardes restent dans votre compte jusqu'à ce que vous les supprimiez. Couper la liaison dans l'application arrête tout accès futur, mais ne supprime <em>pas</em> les sauvegardes déjà téléversées ; celles-là, vous les supprimez dans Drive.</li>
+    <li><strong>Le jeton de connexion :</strong> conservé sur votre appareil dans le stockage protégé du système d'exploitation, et effacé lorsque vous coupez la liaison.</li>
+    <li><strong>Chez nous :</strong> nous ne conservons rien, parce que nous ne recevons rien. La seule exception est ce que vous nous envoyez vous-même à notre adresse de contact, que nous gardons le temps de vous répondre.</li>
+  </ul>
 
-  <h2 id="contact">Contact et mises à jour</h2>
-  <p>Pour toute question ou demande de confidentialité, écrivez à <a href="mailto:support@sened.group">support@sened.group</a>. Nous mettrons cette page à jour si le traitement des données par Sened change ; la date de dernière mise à jour figure en haut de page.</p>
+  <h2 id="rights">Votre contrôle et les droits de vos clients</h2>
+  <p>Comme les données sont entre vos mains, le contrôle est concret et non procédural :</p>
+  <ul>
+    <li><strong>Accès et export :</strong> exportez la base complète dans un fichier depuis les réglages de sauvegarde, à tout moment et sans l'autorisation de personne.</li>
+    <li><strong>Rectification et suppression :</strong> modifiez ou supprimez les fiches clients, les comptes du personnel et le reste depuis l'application.</li>
+    <li><strong>Retrait du consentement :</strong> coupez la liaison Google Drive dans les réglages, ou révoquez son accès depuis la <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer">page des autorisations du compte Google</a>.</li>
+    <li><strong>Portabilité :</strong> le fichier de la base est le vôtre ; déplacez-le vers un autre appareil et restaurez-le là.</li>
+  </ul>
+  <p>Si votre restaurant relève d'un régime de protection des données qui donne des droits à vos clients — accès, rectification, effacement — c'est vous qui répondez à ces demandes, avec les outils ci-dessus, parce que vous êtes le responsable de ces données. Nous vous aidons techniquement sur demande.</p>
+
+  <h2 id="secure">Comment les données sont protégées</h2>
+  <p>Les mesures sont détaillées sur la <a href="/fr/security.html">page Sécurité</a>. Les principales : un stockage local qui ne traverse aucun réseau externe, un compte distinct avec des droits définis pour chaque employé, des mots de passe stockés sous forme d'empreintes, et le jeton Google gardé dans le stockage protégé du système. Comme l'appareil est le vôtre, une part de la protection reste votre responsabilité : un mot de passe sur le système d'exploitation, un réseau local fermé, et des sauvegardes dont vous testez la restauration de temps en temps.</p>
+  <p>Personne ne peut promettre une sécurité absolue. Ce que nous pouvons promettre, c'est la plus petite exposition possible — en gardant dans votre restaurant tout ce qui n'a aucune raison d'en sortir.</p>
+
+  <h2 id="site">Ce site</h2>
+  <p>Ces pages servent à présenter le produit et à publier ses politiques : aucun formulaire de collecte, aucun cookie de notre part, aucune statistique, aucun JavaScript. Elles sont hébergées sur GitHub Pages derrière Cloudflare, et les deux peuvent traiter des données techniques de connexion telles qu'une adresse IP pour servir et protéger la page, selon la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">déclaration de confidentialité de GitHub</a> et la <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">politique de Cloudflare</a>. Les polices sont chargées depuis Google Fonts, seule connexion externe de la page. Les captures d'écran présentées proviennent d'un établissement de démonstration aux noms et chiffres inventés, et non des données d'un restaurant réel.</p>
+
+  <h2 id="changes">Modifications et contact</h2>
+  <p>Si le traitement des données par Sened change, nous mettons cette page à jour et modifions la date en haut. Tout changement important — la collecte de données que nous ne collections pas — est indiqué ici clairement, et non glissé en silence.</p>
+  <p>Pour toute question, demande de confidentialité, ou point à régler avant un achat, écrivez à <a href="mailto:contact@sened.group">contact@sened.group</a>. Pour signaler une faille de sécurité, mettez le mot « sécurité » en objet ; les détails sont sur la <a href="/fr/security.html">page Sécurité</a>.</p>
 </main>
 
 <footer>
@@ -85,7 +136,7 @@
       <a href="/fr/security.html">Sécurité</a>
       <a href="/fr/privacy.html">Confidentialité</a>
       <a href="/fr/terms.html">Conditions</a>
-      <a href="mailto:support@sened.group">support@sened.group</a>
+      <a href="mailto:contact@sened.group">contact@sened.group</a>
     </nav>
     <p class="fine">Sened n'est pas affilié à Google. Google et Google Drive sont des marques de leurs propriétaires respectifs.</p>
   </div>

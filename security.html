@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>الأمان | سند للمطاعم</title>
-<meta name="description" content="كيف يحمي سند للمطاعم بيانات المطعم: التخزين المحلي، أقل صلاحية ممكنة في Google Drive، أمان هذا الموقع، وكيفية الإبلاغ عن ثغرة.">
+<title>Security | Sened for Restaurants</title>
+<meta name="description" content="How Sened for Restaurants protects data: local storage, least-privilege Google Drive access, this site's hardening, and how to report a vulnerability.">
 <meta name="theme-color" content="#101410">
 <link rel="canonical" href="https://rst.sened.group/security.html">
-<link rel="alternate" hreflang="ar" href="https://rst.sened.group/security.html">
-<link rel="alternate" hreflang="en" href="https://rst.sened.group/en/security.html">
+<link rel="alternate" hreflang="ar" href="https://rst.sened.group/ar/security.html">
+<link rel="alternate" hreflang="en" href="https://rst.sened.group/security.html">
 <link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/security.html">
 <link rel="alternate" hreflang="x-default" href="https://rst.sened.group/security.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,112 +19,113 @@
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-<a class="skip" href="#main">تجاوز إلى المحتوى</a>
+<a class="skip" href="#main">Skip to content</a>
 
 <header id="hd">
   <div class="hd-in">
-    <a class="brand" href="/"><b>سند</b><span>للمطاعم</span></a>
-    <div class="lang" aria-label="اللغة">
-      <a href="/security.html" aria-current="true" lang="ar" hreflang="ar">ع</a>
-      <a href="/en/security.html" lang="en" hreflang="en">EN</a>
+    <a class="brand" href="/"><b>Sened</b><span>for Restaurants</span></a>
+    <span class="lang-hint" aria-hidden="true">Language</span>
+    <div class="lang" aria-label="Language">
+      <a href="/ar/security.html" lang="ar" hreflang="ar">ع</a>
+      <a href="/security.html" aria-current="true" lang="en" hreflang="en">EN</a>
       <a href="/fr/security.html" lang="fr" hreflang="fr">FR</a>
     </div>
-    <nav id="nav" aria-label="التنقل الرئيسي">
-      <a href="/">الرئيسية</a>
-      <a href="/security.html" aria-current="page">الأمان</a>
-      <a href="/privacy.html">الخصوصية</a>
-      <a href="/terms.html">الشروط</a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/security.html" aria-current="page">Security</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
     </nav>
   </div>
 </header>
 
 <main id="main" class="wrap narrow document">
-  <h1>الأمان</h1>
-  <p class="date">آخر تحديث: 27 سبتمبر 2026</p>
-  <p>تشرح هذه الصفحة الإجراءات التي يقوم عليها أمان سند للمطاعم: كيف تُحفظ بيانات المطعم، وما حدود ما يطلبه التطبيق من حساب Google، وكيف بُني هذا الموقع، وكيف تُبلغنا إن وجدت ثغرة.</p>
+  <h1>Security</h1>
+  <p class="date">Last updated: 4 October 2026</p>
+  <p>This page describes what Sened's security rests on: where restaurant data is kept, the limits of what the application asks from a Google account, how this site is built, and how to tell us if you find a vulnerability.</p>
 
   <div class="toc">
-    <p>محتويات الصفحة</p>
+    <p>On this page</p>
     <ul>
-      <li><a href="#data">مكان البيانات ومن يتحكم فيها</a></li>
-      <li><a href="#least">أقل صلاحية ممكنة في Google Drive</a></li>
-      <li><a href="#site">أمان هذا الموقع</a></li>
-      <li><a href="#mail">بريد الدعم وانتحال الهوية</a></li>
-      <li><a href="#owner">مسؤوليات مالك المطعم</a></li>
-      <li><a href="#report">الإبلاغ عن ثغرة</a></li>
+      <li><a href="#data">Where the data lives and who controls it</a></li>
+      <li><a href="#least">Least privilege in Google Drive</a></li>
+      <li><a href="#site">This site's security</a></li>
+      <li><a href="#mail">Support email and impersonation</a></li>
+      <li><a href="#owner">The owner's responsibilities</a></li>
+      <li><a href="#report">Reporting a vulnerability</a></li>
     </ul>
   </div>
 
-  <h2 id="data">مكان البيانات ومن يتحكم فيها</h2>
-  <p>تُخزَّن بيانات المطعم — الطلبات والأصناف والمخزون والمصاريف والإعدادات وحسابات العاملين — في قاعدة بيانات على جهاز المطعم. لا يوجد خادم وسيط تابع لنا تمر عليه هذه البيانات، ولا يرسل التطبيق بيانات تشغيل المطعم إلى أي طرف ثالث.</p>
+  <h2 id="data">Where the data lives and who controls it</h2>
+  <p>Restaurant data — orders, items, inventory, expenses, settings and staff accounts — is stored in a database on the restaurant's own device. No intermediary server of ours carries this data, and the application does not send restaurant operations data to any third party.</p>
   <ul>
-    <li>التحكم الكامل في الجهاز وفي من يستخدمه بيد مالك المطعم.</li>
-    <li>لكل عامل حساب بصلاحيات محدّدة، فلا يصل إلى ما لا يلزم عمله.</li>
-    <li>أجهزة النادل والمطبخ تتصل عبر الشبكة المحلية التي يضبطها المالك، لا عبر الإنترنت.</li>
+    <li>Full control of the device and of who uses it stays with the owner.</li>
+    <li>Each employee has an account with defined permissions and cannot reach what their job does not require.</li>
+    <li>Waiter and kitchen devices connect over the local network the owner configures, not over the internet.</li>
   </ul>
 
-  <h2 id="least">أقل صلاحية ممكنة في Google Drive</h2>
-  <p>النسخ الاحتياطي السحابي اختياري. وعند تفعيله يطلب سند صلاحية <code>https://www.googleapis.com/auth/drive.file</code> فقط، وهي أضيق صلاحية تكفي للمهمة:</p>
+  <h2 id="least">Least privilege in Google Drive</h2>
+  <p>Cloud backup is optional. When it is enabled, Sened requests the <code>https://www.googleapis.com/auth/drive.file</code> scope only — the narrowest scope that does the job:</p>
   <ul>
-    <li>تسمح بالوصول إلى الملفات التي أنشأها سند نفسه فقط — لا إلى بقية ملفات حسابك في Drive.</li>
-    <li>تُستخدم لرفع نسخة قاعدة البيانات، وعرض النسخ السابقة، وتنزيل نسخة مختارة لاستعادتها.</li>
-    <li>لا تُستخدم بيانات Google للإعلانات ولا تُباع ولا تُشارك مع معلنين ولا تُستخدم لتدريب نماذج.</li>
+    <li>It grants access only to files Sened itself created — not to the rest of your Drive.</li>
+    <li>It is used to upload a database backup, list previous backups, and download a selected one to restore.</li>
+    <li>Google user data is never used for advertising, never sold, never shared with advertisers and never used to train models.</li>
   </ul>
-  <p>يُحفظ رمز الاتصال (token) على جهاز المطعم في تخزين محمي يوفّره نظام التشغيل، ولا يظهر في هذا الموقع ولا يُرسل إلينا. ويمكن للمالك قطع الربط من إعدادات التطبيق في أي وقت، أو إلغاء الوصول من <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer">صفحة صلاحيات حساب Google</a>.</p>
+  <p>The connection token is kept on the restaurant's device in protected storage provided by the operating system; it never appears on this site and is never sent to us. The owner can disconnect from the app's settings at any time, or revoke access from the <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer">Google account permissions page</a>.</p>
   <div class="notice">
-    <p><strong>ما يجب أن تعرفه:</strong> ملف النسخة الاحتياطية يحتوي بيانات المطعم كاملة. ومن يملك الملف يملك البيانات، لذا حماية حساب Google — كلمة مرور قوية وتحقق بخطوتين — جزء أساسي من حماية مطعمك، ولا تُشارك روابط النسخ مع أحد.</p>
+    <p><strong>What you should know:</strong> a backup file contains the restaurant's full data. Whoever holds the file holds the data, so protecting the Google account — a strong password and two-step verification — is an essential part of protecting your restaurant, and backup links should never be shared.</p>
   </div>
 
-  <h2 id="site">أمان هذا الموقع</h2>
-  <p>هذا الموقع صفحات ثابتة للتعريف والسياسات فقط، بُني بحيث تكون مساحة الخطر فيه أصغر ما يمكن:</p>
+  <h2 id="site">This site's security</h2>
+  <p>This site is a set of static pages for information and policies only, built so that its attack surface is as small as possible:</p>
   <ul>
-    <li><strong>HTTPS إلزامي:</strong> كل طلب على <code>http://</code> يُحوَّل إلى <code>https://</code>، والشهادة تُدار وتُجدَّد آليًا.</li>
-    <li><strong>لا شيفرة JavaScript:</strong> لا يوجد سكربت واحد في الموقع، فلا محل لتنفيذ شيفرة في متصفحك.</li>
-    <li><strong>سياسة محتوى صارمة (CSP):</strong> الأصل الافتراضي <code>'none'</code>، ولا يُسمح إلا بملف التنسيق والصور من النطاق نفسه وخطوط Google Fonts.</li>
-    <li><strong>لا تتبّع ولا نماذج:</strong> لا أدوات تحليلات ولا كوكيز نضعها، ولا حقول تجمع بياناتك. التواصل عبر البريد فقط.</li>
-    <li><strong>إحالة محدودة:</strong> <code>strict-origin-when-cross-origin</code> فلا يُسرَّب مسار الصفحة إلى مواقع أخرى.</li>
+    <li><strong>HTTPS enforced:</strong> every <code>http://</code> request is redirected to <code>https://</code>, and the certificate is managed and renewed automatically.</li>
+    <li><strong>No JavaScript:</strong> there is not a single script on the site, so there is nothing to execute in your browser.</li>
+    <li><strong>Strict Content Security Policy:</strong> the default source is <code>'none'</code>; only our own stylesheet and images, plus Google Fonts, are allowed.</li>
+    <li><strong>No tracking, no forms:</strong> no analytics and no cookies of ours, and no fields that collect your data. Contact is by email only.</li>
+    <li><strong>Limited referrer:</strong> <code>strict-origin-when-cross-origin</code>, so page paths are not leaked to other sites.</li>
   </ul>
-  <p>تستضيف <a href="https://docs.github.com/en/pages" rel="noopener noreferrer">GitHub Pages</a> هذه الصفحات، وقد تعالج بيانات الزيارة وفق سياستها. وتُحمَّل الخطوط من Google Fonts، وهو الاتصال الخارجي الوحيد الذي تُجريه الصفحة. وبما أن الاستضافة ثابتة، فبعض الحمايات تُفرض عبر ترويسات الخدمة ولا نتحكم فيها من صفحاتنا؛ ولهذا لا يحتوي الموقع على أي وظيفة تتعامل مع بيانات المستخدمين أصلًا.</p>
+  <p>These pages are hosted on <a href="https://docs.github.com/en/pages" rel="noopener noreferrer">GitHub Pages</a>, which may process visit data under its own policy. Fonts are loaded from Google Fonts — the only external connection the page makes. Because the hosting is static, some protections are applied through service headers we do not control; this is also why the site contains no functionality that handles user data at all.</p>
 
-  <h2 id="mail">بريد الدعم وانتحال الهوية</h2>
-  <p>عنوان الدعم الرسمي الوحيد هو <a href="mailto:support@sened.group">support@sened.group</a>، وهو عنوان استقبال يُحوَّل إلى صندوق الفريق.</p>
+  <h2 id="mail">Support email and impersonation</h2>
+  <p>The only official support address is <a href="mailto:contact@sened.group">contact@sened.group</a>, a receiving address forwarded to the team's mailbox.</p>
   <ul>
-    <li>لا نطلب منك كلمة مرور حسابك، ولا رمز تحقق، ولا ملف نسخة احتياطية عبر البريد أو الهاتف.</li>
-    <li>لا نرسل روابط لتغيير كلمة المرور إلا إن طلبتها بنفسك، ولا نطلب تنصيب برامج من مصادر أخرى.</li>
-    <li>إن وصلتك رسالة تنتحل اسم سند، لا تستجب لها وأبلغنا بها مع ترويسة الرسالة كاملة.</li>
-  </ul>
-
-  <h2 id="owner">مسؤوليات مالك المطعم</h2>
-  <p>جزء كبير من الأمان في نظام يعمل على جهازك يعتمد عليك:</p>
-  <ul>
-    <li>حساب نظام تشغيل بكلمة مرور على جهاز المطعم، وقفل الشاشة عند الترك.</li>
-    <li>حساب منفصل لكل عامل بأدنى صلاحية تكفيه، وإلغاء حساب من يترك العمل فورًا.</li>
-    <li>شبكة محلية مغلقة بكلمة مرور قوية، وعدم وضع جهاز المطعم على شبكة الزوار.</li>
-    <li>نسخ احتياطية دورية <strong>واختبار استعادتها</strong> — النسخة التي لم تُختبر ليست نسخة.</li>
-    <li>تحديث نظام التشغيل والتطبيق، والاحتفاظ بنسخة خارج الجهاز (قرص خارجي أو Drive).</li>
+    <li>We never ask you for your account password, a verification code, or a backup file by email or phone.</li>
+    <li>We do not send password-reset links unless you requested one, and we never ask you to install software from other sources.</li>
+    <li>If you receive a message impersonating Sened, do not respond to it and report it to us with the full message headers.</li>
   </ul>
 
-  <h2 id="report">الإبلاغ عن ثغرة</h2>
-  <p>إن وجدت ثغرة في التطبيق أو في هذا الموقع، راسلنا على <a href="mailto:support@sened.group">support@sened.group</a> وضع في العنوان كلمة «أمان». ويفيدنا في رسالتك: وصف الثغرة، وخطوات إظهارها، والأثر المتوقع، والإصدار أو الرابط المعني.</p>
+  <h2 id="owner">The owner's responsibilities</h2>
+  <p>In a system that runs on your own device, a large part of security depends on you:</p>
   <ul>
-    <li>نؤكد استلام رسالتك، ونعمل على إصلاح ما يثبت منها.</li>
-    <li>نطلب منك ألا تنشر التفاصيل قبل الإصلاح، وألا تصل إلى بيانات مطاعم حقيقية أو تعدّلها أو تحذفها أثناء الاختبار.</li>
-    <li>لا تختبر بطرق تُعطّل الخدمة، ولا تستخدم الهندسة الاجتماعية على مستخدمي سند.</li>
+    <li>A password-protected operating-system account on the restaurant's device, and a locked screen when unattended.</li>
+    <li>A separate account for each employee with the least privilege that suffices, and immediate removal when someone leaves.</li>
+    <li>A local network closed with a strong password, and the restaurant's device kept off the guest network.</li>
+    <li>Regular backups <strong>and tested restores</strong> — an untested backup is not a backup.</li>
+    <li>Keeping the operating system and the application updated, and keeping a copy off the device (external disk or Drive).</li>
   </ul>
-  <p>تفاصيل التواصل الآلية في <a href="/.well-known/security.txt">/.well-known/security.txt</a>.</p>
+
+  <h2 id="report">Reporting a vulnerability</h2>
+  <p>If you find a vulnerability in the application or in this site, write to <a href="mailto:contact@sened.group">contact@sened.group</a> with "security" in the subject. Helpful details: a description of the issue, steps to reproduce it, the expected impact, and the version or URL concerned.</p>
+  <ul>
+    <li>We acknowledge your message and work on fixing what is confirmed.</li>
+    <li>We ask that you not publish details before a fix, and that you not access, modify or delete real restaurant data while testing.</li>
+    <li>Please do not test in ways that disrupt the service, and do not use social engineering against Sened's users.</li>
+  </ul>
+  <p>Machine-readable contact details: <a href="/.well-known/security.txt">/.well-known/security.txt</a>.</p>
 </main>
 
 <footer>
   <div class="wrap foot">
-    <p class="copy">© 2026 سند للمطاعم — من <a href="https://tech.sened.group/">سند للحلول الرقمية</a></p>
-    <nav class="foot-links" aria-label="روابط الموقع">
-      <a href="/">الرئيسية</a>
-      <a href="/security.html">الأمان</a>
-      <a href="/privacy.html">الخصوصية</a>
-      <a href="/terms.html">الشروط</a>
-      <a href="mailto:support@sened.group">support@sened.group</a>
+    <p class="copy">© 2026 Sened for Restaurants — by <a href="https://tech.sened.group/en/">Sened Digital Solutions</a></p>
+    <nav class="foot-links" aria-label="Site links">
+      <a href="/">Home</a>
+      <a href="/security.html">Security</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:contact@sened.group">contact@sened.group</a>
     </nav>
-    <p class="fine">سند غير تابع لشركة Google. أسماء Google و Google Drive علامات تجارية لأصحابها.</p>
+    <p class="fine">Sened is not affiliated with Google. Google and Google Drive are trademarks of their respective owners.</p>
   </div>
 </footer>
 </body>

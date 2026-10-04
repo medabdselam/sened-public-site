@@ -1,71 +1,57 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>سند للمطاعم — الطلب من الصالة إلى المطبخ</title>
-<meta name="description" content="سند للمطاعم: نظام نقاط بيع وإدارة يعمل على جهاز المطعم وشبكته المحلية. الطلبات، شاشة المطبخ، المخزون، المصاريف والتقارير — مع نسخ احتياطي اختياري إلى Google Drive.">
+<title>Sened for Restaurants — from the floor to the kitchen</title>
+<meta name="description" content="Sened for Restaurants is a point-of-sale and management system that runs on the restaurant's own device and local network: orders, kitchen display, inventory, expenses and reports, with optional Google Drive backup.">
 <meta name="theme-color" content="#101410">
 <link rel="canonical" href="https://rst.sened.group/">
-<link rel="alternate" hreflang="ar" href="https://rst.sened.group/">
-<link rel="alternate" hreflang="en" href="https://rst.sened.group/en/">
+<link rel="alternate" hreflang="ar" href="https://rst.sened.group/ar/">
+<link rel="alternate" hreflang="en" href="https://rst.sened.group/">
 <link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/">
 <link rel="alternate" hreflang="x-default" href="https://rst.sened.group/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rst.sened.group/">
-<meta property="og:site_name" content="سند للمطاعم">
-<meta property="og:title" content="سند للمطاعم — الطلب من الصالة إلى المطبخ">
-<meta property="og:description" content="نظام نقاط بيع وإدارة مطاعم يعمل على جهازك وشبكتك المحلية، بلا إنترنت وبلا خادم وسيط.">
-<meta property="og:locale" content="ar_MR">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Sened for Restaurants">
+<meta property="og:title" content="Sened for Restaurants — from the floor to the kitchen">
+<meta property="og:description" content="A POS and restaurant management system that runs on your own device and local network — no internet, no server in between.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_MR">
 <meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:image" content="https://rst.sened.group/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Sened point-of-sale screen: the item grid in the middle and the order bill beside it">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Reem+Kufi:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "@id": "https://rst.sened.group/#app",
-  "name": "سند للمطاعم",
-  "alternateName": ["Sened for Restaurants", "Sened pour Restaurants"],
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Windows",
-  "url": "https://rst.sened.group/",
-  "inLanguage": ["ar", "en", "fr"],
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://tech.sened.group/#organization",
-    "name": "سند — الحلول الرقمية",
-    "url": "https://tech.sened.group/",
-    "email": "support@sened.group"
-  },
-  "description": "نظام نقاط بيع وإدارة مطاعم يعمل على جهاز المطعم: الطلبات وشاشة المطبخ والمخزون والمصاريف والتقارير، مع نسخ احتياطي اختياري إلى Google Drive بصلاحية drive.file وحدها."
-}
-</script>
 </head>
 <body>
-<a class="skip" href="#main">تجاوز إلى المحتوى</a>
+<a class="skip" href="#main">Skip to content</a>
 
 <header id="hd">
   <div class="hd-in">
-    <a class="brand" href="/"><b>سند</b><span>للمطاعم</span></a>
-    <div class="lang" aria-label="اللغة">
-      <a href="/" aria-current="true" lang="ar">ع</a>
-      <a href="/en/" lang="en" hreflang="en">EN</a>
+    <a class="brand" href="/"><b>Sened</b><span>for Restaurants</span></a>
+    <span class="lang-hint" aria-hidden="true">Language</span>
+    <div class="lang" aria-label="Language">
+      <a href="/ar/" lang="ar" hreflang="ar">ع</a>
+      <a href="/" aria-current="true" lang="en" hreflang="en">EN</a>
       <a href="/fr/" lang="fr" hreflang="fr">FR</a>
     </div>
-    <nav id="nav" aria-label="التنقل الرئيسي">
-      <a href="/" aria-current="page">الرئيسية</a>
-      <a href="#work">ما يفعله</a>
-      <a href="#setup">التشغيل</a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="/" aria-current="page">Home</a>
+      <a href="#work">What it does</a>
+      <a href="#screens">Screens</a>
+      <a href="#setup">Setup</a>
       <a href="#drive">Google Drive</a>
-      <a href="/security.html">الأمان</a>
-      <a href="/privacy.html">الخصوصية</a>
-      <a href="/terms.html">الشروط</a>
+      <a href="/security.html">Security</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
     </nav>
   </div>
 </header>
@@ -73,156 +59,235 @@
 <main id="main">
 
   <section class="hero wrap">
-    <h1>الطلب يمشي من الصالة إلى المطبخ، بلا إنترنت.</h1>
-    <p class="lead">سند يدير مطعمك من جهازك: الطلبات، شاشة المطبخ، المخزون، المصاريف والتقارير. أجهزة النادل والمطبخ تتصل بشبكة المطعم المحلية، والبيانات لا تغادر المطعم إلا في نسخة احتياطية تقرّرها أنت.</p>
+    <h1>The order travels from the floor to the kitchen, with no internet.</h1>
+    <p class="lead">Sened runs your restaurant from your own device: orders, kitchen display, inventory, expenses and reports. Waiter and kitchen devices connect over the restaurant's local network, and the data never leaves the restaurant except in a backup you choose to make.</p>
     <div class="keys">
-      <a class="key key-1" href="#work">ما يفعله سند</a>
-      <a class="key" href="#drive">النسخ الاحتياطي</a>
+      <a class="key key-1" href="#screens">See the screens</a>
+      <a class="key" href="#work">What Sened does</a>
     </div>
   </section>
 
   <div class="wrap">
-    <div class="pass" role="img" aria-label="ثلاثة بونات طلب على شاشة المطبخ: طلب جديد، طلب في التحضير، وطلب جاهز للتقديم">
+    <div class="pass" role="img" aria-label="Three order tickets on a kitchen display: a new order, an order being prepared, and an order ready to serve">
       <article class="ticket">
-        <div class="t-head"><span class="t-no">#142</span><span class="t-table">طاولة 6</span></div>
+        <div class="t-head"><span class="t-no">#142</span><span class="t-table">Table 6</span></div>
         <ul class="t-lines">
-          <li><span>شاورما دجاج</span><b>2</b></li>
-          <li><span>سلطة</span><b>1</b></li>
-          <li><span>عصير ليمون</span><b>2</b></li>
+          <li><span>Chicken shawarma</span><b>2</b></li>
+          <li><span>Salad</span><b>1</b></li>
+          <li><span>Lemon juice</span><b>2</b></li>
         </ul>
-        <div class="t-foot"><span class="t-time">00:18</span><span class="t-state is-new">جديد</span></div>
+        <div class="t-foot"><span class="t-time">00:18</span><span class="t-state is-new">New</span></div>
       </article>
       <article class="ticket">
-        <div class="t-head"><span class="t-no">#141</span><span class="t-table">سفري</span></div>
+        <div class="t-head"><span class="t-no">#141</span><span class="t-table">Takeaway</span></div>
         <ul class="t-lines">
-          <li><span>وجبة سمك</span><b>1</b></li>
-          <li><span>أرز أبيض</span><b>1</b></li>
+          <li><span>Fish plate</span><b>1</b></li>
+          <li><span>White rice</span><b>1</b></li>
         </ul>
-        <div class="t-foot"><span class="t-time">04:12</span><span class="t-state is-cooking">في التحضير</span></div>
+        <div class="t-foot"><span class="t-time">04:12</span><span class="t-state is-cooking">Cooking</span></div>
       </article>
       <article class="ticket">
-        <div class="t-head"><span class="t-no">#139</span><span class="t-table">طاولة 2</span></div>
+        <div class="t-head"><span class="t-no">#139</span><span class="t-table">Table 2</span></div>
         <ul class="t-lines">
-          <li><span>لحم مشوي</span><b>3</b></li>
-          <li><span>خبز</span><b>3</b></li>
-          <li><span>شاي</span><b>4</b></li>
+          <li><span>Grilled meat</span><b>3</b></li>
+          <li><span>Bread</span><b>3</b></li>
+          <li><span>Tea</span><b>4</b></li>
         </ul>
-        <div class="t-foot"><span class="t-time">09:40</span><span class="t-state is-ready">جاهز</span></div>
+        <div class="t-foot"><span class="t-time">09:40</span><span class="t-state is-ready">Ready</span></div>
       </article>
     </div>
-    <p class="pass-note">هكذا يرى المطبخ الطلبات: رقم البون، الطاولة، الأصناف، ومدة الانتظار.</p>
+    <p class="pass-note">This is how the kitchen sees orders: ticket number, table, items, and how long they have waited.</p>
   </div>
 
   <section class="sec" id="work">
     <div class="wrap">
-      <span class="label">ما يفعله</span>
-      <h2>تشغيل يوم كامل في المطعم</h2>
-      <p class="sub">من فتح الصالة إلى إغلاق الصندوق، والوسم على اليسار يبيّن أين يعمل كل جزء.</p>
+      <span class="label">What it does</span>
+      <h2>A full day of restaurant operation</h2>
+      <p class="sub">From opening the floor to closing the till. The tag on the right shows where each part runs.</p>
       <ul class="bill">
         <li>
-          <b>الطلبات والصندوق</b>
-          <p>تسجيل الطلب، الطاولات والسفري، الدفع والفاتورة، وإقفال اليوم.</p>
-          <span class="tag">على الجهاز</span>
+          <b>Orders and till</b>
+          <p>Take the order, handle tables and takeaway, payment and invoice, and close the day.</p>
+          <span class="tag">on the device</span>
         </li>
         <li>
-          <b>شاشة المطبخ</b>
-          <p>البون يصل إلى الطباخ لحظة تسجيله، ويتحرك بين «جديد» و«في التحضير» و«جاهز».</p>
-          <span class="tag">شبكة محلية</span>
+          <b>Kitchen display</b>
+          <p>The ticket reaches the cook the moment it is entered, and moves between New, Cooking and Ready.</p>
+          <span class="tag">local network</span>
         </li>
         <li>
-          <b>المخزون والمشتريات</b>
-          <p>الكميات والمواد والموردون، لتعرف ما نقص قبل أن يتوقف الطبخ.</p>
-          <span class="tag">على الجهاز</span>
+          <b>Inventory and purchases</b>
+          <p>Quantities, materials and suppliers, so you know what ran out before the cooking stops.</p>
+          <span class="tag">on the device</span>
         </li>
         <li>
-          <b>المصاريف والتقارير</b>
-          <p>تكاليف التشغيل ومبيعات اليوم والأرباح، بتقارير تُقرأ وتُطبع.</p>
-          <span class="tag">على الجهاز</span>
+          <b>Expenses and reports</b>
+          <p>Operating costs, the day's sales and profit, in reports you can read and print.</p>
+          <span class="tag">on the device</span>
         </li>
         <li>
-          <b>حسابات العاملين</b>
-          <p>لكل عامل حساب وصلاحية يحدّدها المالك، فلا يرى إلا ما يحتاجه عمله.</p>
-          <span class="tag">يضبطها المالك</span>
+          <b>Staff accounts</b>
+          <p>Each employee gets an account and the permissions the owner sets, and sees nothing beyond the job.</p>
+          <span class="tag">owner sets it</span>
         </li>
         <li>
-          <b>النسخ الاحتياطي والاستعادة</b>
-          <p>نسخة محلية دائمًا، ونسخة في Google Drive إن اخترت ربط حسابك.</p>
-          <span class="tag">اختياري</span>
+          <b>Backup and restore</b>
+          <p>A local copy always, and a copy in Google Drive if you choose to link your account.</p>
+          <span class="tag">optional</span>
+        </li>
+        <li>
+          <b>Interface language</b>
+          <p>Arabic with a right-to-left interface, English, and French — chosen in the store settings.</p>
+          <span class="tag">three languages</span>
         </li>
       </ul>
     </div>
   </section>
 
+  <section class="sec" id="screens">
+    <div class="wrap">
+      <span class="label">Inside the app</span>
+      <h2>Screens from a running copy, not mock-ups</h2>
+      <p class="sub">These are captures of Sened running a demo store called Harbor Grill, in its English interface. The same app runs in Arabic right-to-left and in French. Tap any screenshot to open it full size.</p>
+      <div class="shots">
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/pos.webp"><img src="/assets/img/pos.webp" width="1200" height="675" loading="lazy" decoding="async" alt="The point-of-sale screen: a grid of items in the middle, and the order bill along the side with totals and item count"></a>
+          <figcaption>
+            <b>Point of sale</b>
+            <span>Items grouped by category, the order type set to dine in, takeaway, delivery or online, and the cover count, table and total updating with every line.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/dashboard.webp"><img src="/assets/img/dashboard.webp" width="1200" height="675" loading="lazy" decoding="async" alt="The day dashboard: net profit, today's sales, running orders and average order value, with a profit breakdown and recent orders below"></a>
+          <figcaption>
+            <b>The day's dashboard</b>
+            <span>Today's sales, net profit, running orders and average order value, with a breakdown of what was deducted — and a plain warning when items sold have no recorded cost.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/kds.webp"><img src="/assets/img/kds.webp" width="1200" height="491" loading="lazy" decoding="async" alt="The kitchen display in four columns — Waiting, Preparing, Ready, Delivered — each ticket showing its order number and items"></a>
+          <figcaption>
+            <b>Kitchen display</b>
+            <span>Four columns a ticket moves through: Waiting, Preparing, Ready, Delivered. Each ticket carries its number, time, order type and table.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/tables.webp"><img src="/assets/img/tables.webp" width="1200" height="506" loading="lazy" decoding="async" alt="The floor plan: tables laid out on the floor coloured by status, with two floors listed above"></a>
+          <figcaption>
+            <b>Floor plan</b>
+            <span>Tables are dragged into place on the floor map, and each colour states the table's status: available, occupied, reserved, cleaning or held.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/inventory.webp"><img src="/assets/img/inventory.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Inventory: a table of ingredients with quantities on hand and low-stock thresholds, items below threshold shown in red"></a>
+          <figcaption>
+            <b>Inventory and purchases</b>
+            <span>Every ingredient has its unit, quantity on hand and low-stock threshold, and anything below it turns red. Purchases, recipes, stock movements and expenses sit alongside.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/staff.webp"><img src="/assets/img/staff.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Staff accounts and the role permission matrix: capabilities as rows, roles as columns, marked allowed or not allowed"></a>
+          <figcaption>
+            <b>Accounts and permissions</b>
+            <span>A matrix showing what each role may do, line by line: owner, manager, cashier, server, and the chef on the kitchen display.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot shot-phone">
+          <a class="shot-link" href="/assets/img/waiter.webp"><img src="/assets/img/waiter.webp" width="620" height="1105" loading="lazy" decoding="async" alt="The server app on a phone: the list of tables with their statuses at the top, and the menu with prices below"></a>
+          <figcaption>
+            <b>The server app on a phone</b>
+            <span>It opens in the browser on the server's phone over the restaurant's network, with nothing to install. Pick the table, add the items, and the order reaches the kitchen.</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="setup">
     <div class="wrap">
-      <span class="label">التشغيل</span>
-      <h2>ثلاث خطوات، بلا خادم ولا اشتراك شهري</h2>
+      <span class="label">Setup</span>
+      <h2>Three steps, with no server and no monthly subscription</h2>
       <ol class="steps">
-        <li><span class="s-num">01</span><b>ثبّت سند على جهاز المطعم</b><span>هذا الجهاز يصير مركز البيانات: الطلبات والأصناف والمخزون والتقارير كلها فيه.</span></li>
-        <li><span class="s-num">02</span><b>اربط أجهزة النادل والمطبخ</b><span>تتصل بجهاز المطعم على الشبكة المحلية التي تضبطها أنت، لا عبر الإنترنت.</span></li>
-        <li><span class="s-num">03</span><b>فعّل النسخ الاحتياطي</b><span>نسخة محلية تكفي للبداية، وتضيف نسخة Drive متى أردت حماية أبعد من الجهاز.</span></li>
+        <li><span class="s-num">01</span><b>Install Sened on the restaurant's device</b><span>That device becomes the data centre: orders, items, inventory and reports all live there.</span></li>
+        <li><span class="s-num">02</span><b>Connect the waiter and kitchen devices</b><span>They reach the restaurant's device over the local network you set up, not over the internet.</span></li>
+        <li><span class="s-num">03</span><b>Turn on backup</b><span>A local copy is enough to start; add a Drive copy whenever you want protection beyond the device.</span></li>
       </ol>
     </div>
   </section>
 
   <section class="sec" id="drive">
     <div class="wrap">
-      <span class="label">صلاحيات Google Drive</span>
-      <h2>ما الذي يطلبه سند من حسابك، ولماذا</h2>
-      <p class="sub">الربط اختياري، ولا يُطلب إلا إذا قرّرت تفعيل النسخ الاحتياطي السحابي. وعندها يطلب سند أضيق صلاحية تكفي، لا أكثر.</p>
+      <span class="label">Google Drive permissions</span>
+      <h2>What Sened asks of your account, and why</h2>
+      <p class="sub">Linking is optional and is requested only if you decide to turn on cloud backup. Sened then asks for the narrowest scope that does the job — nothing more.</p>
       <div class="tablewrap">
         <table>
-          <thead><tr><th>الصلاحية</th><th>ما تسمح به</th><th>لماذا يحتاجها سند</th></tr></thead>
+          <thead><tr><th>Scope</th><th>What it allows</th><th>Why Sened needs it</th></tr></thead>
           <tbody>
             <tr>
               <td><code>drive.file</code></td>
-              <td>الوصول إلى الملفات التي أنشأها سند أو فتحها المستخدم عبره فقط</td>
-              <td>رفع نسخة قاعدة البيانات، وعرض النسخ السابقة، وتنزيل نسخة مختارة للاستعادة</td>
+              <td>Access only to files Sened created, or that the user opened through it</td>
+              <td>Upload a database backup, list previous backups, download a selected backup to restore</td>
             </tr>
             <tr>
-              <td>قراءة بقية ملفات Drive</td>
+              <td>Reading your other Drive files</td>
               <td>—</td>
-              <td>غير مطلوبة، ولا يطلبها سند</td>
+              <td>Not needed, and not requested</td>
             </tr>
             <tr>
-              <td>بيانات Google لأغراض أخرى</td>
+              <td>Google data for other purposes</td>
               <td>—</td>
-              <td>لا تُستخدم للإعلانات، ولا تُباع، ولا تُشارك، ولا تُستخدم لتدريب نماذج</td>
+              <td>Never used for advertising, never sold, never transferred, never used to train models</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <figure class="shot shot-wide">
+        <a class="shot-link" href="/assets/img/backup.webp"><img src="/assets/img/backup.webp" width="1600" height="900" loading="lazy" decoding="async" alt="The backup screen in Sened's settings: create a backup, export the database, restore from a file, a Connect Google Drive button, and the backup history"></a>
+        <figcaption>
+          <b>The backup screen inside the app</b>
+          <span>The local backup, the database export and the restore all work without a Google account. Linking Drive is a single button below them, asked for only if you want it, and the backup history appears once it is on.</span>
+        </figcaption>
+      </figure>
       <div class="notice">
-        <p><strong>ما يجب أن تعرفه:</strong> نسخة النسخ الاحتياطي تحتوي بيانات المطعم كاملة. احمِ حساب Google بكلمة مرور قوية وتحقق بخطوتين، ولا تشارك روابط النسخ. ويمكنك قطع الربط من إعدادات التطبيق متى شئت.</p>
+        <p><strong>What you should know:</strong> a backup file holds the restaurant's full data. Protect the Google account with a strong password and two-step verification, and never share backup links. You can disconnect from the app's settings at any time.</p>
       </div>
-      <p class="mt"><a href="/privacy.html">سياسة الخصوصية</a> · <a href="/security.html">الأمان</a> · <a href="/terms.html">الشروط</a></p>
+      <p class="mt"><a href="/privacy.html">Privacy Policy</a> · <a href="/security.html">Security</a> · <a href="/terms.html">Terms</a></p>
     </div>
   </section>
 
   <section class="sec" id="faq">
     <div class="wrap narrow">
-      <span class="label">أسئلة متكررة</span>
-      <h2>ما يسأل عنه أصحاب المطاعم</h2>
+      <span class="label">FAQ</span>
+      <h2>What restaurant owners ask</h2>
       <div class="faq">
         <details>
-          <summary>هل أحتاج إنترنت لتشغيل المطعم؟</summary>
-          <p>لا. التشغيل اليومي يجري على الشبكة المحلية. الإنترنت مطلوب فقط لرفع نسخة احتياطية إلى Google Drive أو استعادتها.</p>
+          <summary>Do I need internet to run the restaurant?</summary>
+          <p>No. Daily operation runs on the local network. Internet is needed only to upload a backup to Google Drive or restore one.</p>
         </details>
         <details>
-          <summary>هل أحتاج حساب Google؟</summary>
-          <p>لا. حساب Google لازم فقط لمن يريد نسخة احتياطية في السحابة. وبدونه تبقى النسخ محلية.</p>
+          <summary>Do I need a Google account?</summary>
+          <p>No. A Google account is needed only for a backup in the cloud. Without it, backups stay local.</p>
         </details>
         <details>
-          <summary>أين تُخزَّن بيانات المطعم؟</summary>
-          <p>في قاعدة بيانات على جهاز المطعم الذي تتحكم فيه. لا يرسل سند بيانات مطعمك إلى خادم لنا ولا إلى طرف ثالث.</p>
+          <summary>Where is the restaurant's data stored?</summary>
+          <p>In a database on the device you control. Sened does not send your restaurant's data to a server of ours or to any third party.</p>
         </details>
         <details>
-          <summary>ماذا يحدث إذا تعطل الجهاز؟</summary>
-          <p>تُستعاد البيانات من أحدث نسخة: محلية، أو من Drive إن كان الربط مفعّلًا. جرّب الاستعادة من حين لآخر — النسخة التي لم تُجرَّب ليست نسخة.</p>
+          <summary>What happens if the device fails?</summary>
+          <p>Data is restored from the most recent backup: local, or from Drive if linking is on. Test a restore from time to time — an untested backup is not a backup.</p>
         </details>
         <details>
-          <summary>كيف أحذف بياناتي؟</summary>
-          <p>البيانات على جهازك وفي حساب Drive الخاص بك، وتحذفها بنفسك متى شئت. ولأي طلب يخص الخصوصية راسلنا على بريد الدعم.</p>
+          <summary>How do I delete my data?</summary>
+          <p>The data is on your device and in your own Drive account, and you can delete it yourself at any time. For any privacy request, write to our support address.</p>
         </details>
       </div>
     </div>
@@ -230,50 +295,40 @@
 
   <section class="sec" id="contact">
     <div class="wrap narrow">
-      <span class="label">تواصل</span>
-      <h2>سؤال في التشغيل، أو بلاغ أمني</h2>
+      <span class="label">Contact</span>
+      <h2>An operations question, or a security report</h2>
       <div class="contact">
-        <a href="mailto:support@sened.group">
-          <span class="k">البريد</span>
-          <span class="t">الدعم والاستفسارات وطلبات الخصوصية</span>
-          <span class="v">support@sened.group</span>
+        <a href="mailto:contact@sened.group">
+          <span class="k">Email</span>
+          <span class="t">Support, questions and privacy requests</span>
+          <span class="v">contact@sened.group</span>
         </a>
         <a href="/security.html">
-          <span class="k">الأمان</span>
-          <span class="t">كيف تُحمى البيانات، وكيف تُبلغ عن ثغرة</span>
+          <span class="k">Security</span>
+          <span class="t">How data is protected, and how to report a vulnerability</span>
           <span class="v">/security</span>
         </a>
-        <a href="https://tech.sened.group/">
-          <span class="k">الشركة</span>
-          <span class="t">سند للحلول الرقمية — البرمجيات والخدمات</span>
+        <a href="https://tech.sened.group/en/">
+          <span class="k">Company</span>
+          <span class="t">Sened Digital Solutions — software and services</span>
           <span class="v">tech.sened.group</span>
         </a>
       </div>
-    </div>
-  </section>
-
-  <section class="sec en-block" lang="en" dir="ltr">
-    <div class="wrap narrow">
-      <h2>About Sened for Restaurants</h2>
-      <p>Sened for Restaurants is a desktop point-of-sale and restaurant management application: orders, kitchen display, inventory, purchases, expenses and reports. The data is stored on the restaurant's own device, and staff devices connect over the restaurant's local network. No account on our side and no internet connection are required for ordinary use.</p>
-      <p>Google Drive access is optional and requested only when the owner enables cloud backup. Sened requests the <code>drive.file</code> scope only, and uses it solely to create Sened's own backup files in the connected account, list those backups, and download a selected one to restore the database. Google user data is never used for advertising, sold, transferred, or used to train models.</p>
-      <p>English pages: <a href="/en/">Home</a> · <a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/security.html">Security</a>. Contact: <a href="mailto:support@sened.group">support@sened.group</a>.</p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap foot">
-    <p class="copy">© 2026 سند للمطاعم — من <a href="https://tech.sened.group/">سند للحلول الرقمية</a></p>
-    <nav class="foot-links" aria-label="روابط الموقع">
-      <a href="/security.html">الأمان</a>
-      <a href="/privacy.html">الخصوصية</a>
-      <a href="/terms.html">الشروط</a>
-      <a href="/en/">English</a>
-      <a href="/fr/">Français</a>
-      <a href="mailto:support@sened.group">support@sened.group</a>
+    <p class="copy">© 2026 Sened for Restaurants — by <a href="https://tech.sened.group/en/">Sened Digital Solutions</a></p>
+    <nav class="foot-links" aria-label="Site links">
+      <a href="/">Home</a>
+      <a href="/security.html">Security</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:contact@sened.group">contact@sened.group</a>
     </nav>
-    <p class="fine">سند غير تابع لشركة Google. أسماء Google و Google Drive علامات تجارية لأصحابها.</p>
+    <p class="fine">Sened is not affiliated with Google. Google and Google Drive are trademarks of their respective owners.</p>
   </div>
 </footer>
 </body>

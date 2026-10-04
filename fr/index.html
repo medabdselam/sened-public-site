@@ -9,8 +9,8 @@
 <meta name="description" content="Sened pour Restaurants est un système de caisse et de gestion qui tourne sur l'appareil du restaurant et son réseau local : commandes, écran cuisine, stock, dépenses et rapports, avec sauvegarde Google Drive optionnelle.">
 <meta name="theme-color" content="#101410">
 <link rel="canonical" href="https://rst.sened.group/fr/">
-<link rel="alternate" hreflang="ar" href="https://rst.sened.group/">
-<link rel="alternate" hreflang="en" href="https://rst.sened.group/en/">
+<link rel="alternate" hreflang="ar" href="https://rst.sened.group/ar/">
+<link rel="alternate" hreflang="en" href="https://rst.sened.group/">
 <link rel="alternate" hreflang="fr" href="https://rst.sened.group/fr/">
 <link rel="alternate" hreflang="x-default" href="https://rst.sened.group/">
 <meta property="og:type" content="website">
@@ -19,6 +19,11 @@
 <meta property="og:title" content="Sened pour Restaurants — de la salle à la cuisine">
 <meta property="og:description" content="Un système de caisse et de gestion qui tourne sur votre appareil et votre réseau local — sans internet, sans serveur intermédiaire.">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://rst.sened.group/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L'écran de caisse de Sened : la grille des articles au centre et la note de la commande sur le côté">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Reem+Kufi:wght@400;500;600&display=swap" rel="stylesheet">
@@ -30,14 +35,16 @@
 <header id="hd">
   <div class="hd-in">
     <a class="brand" href="/fr/"><b>Sened</b><span>pour Restaurants</span></a>
+    <span class="lang-hint" aria-hidden="true">Langue</span>
     <div class="lang" aria-label="Langue">
-      <a href="/" lang="ar" hreflang="ar">ع</a>
-      <a href="/en/" lang="en" hreflang="en">EN</a>
+      <a href="/ar/" lang="ar" hreflang="ar">ع</a>
+      <a href="/" lang="en" hreflang="en">EN</a>
       <a href="/fr/" aria-current="true" lang="fr" hreflang="fr">FR</a>
     </div>
     <nav id="nav" aria-label="Navigation principale">
       <a href="/fr/" aria-current="page">Accueil</a>
       <a href="#work">Ce qu'il fait</a>
+      <a href="#screens">Écrans</a>
       <a href="#setup">Mise en place</a>
       <a href="#drive">Google Drive</a>
       <a href="/fr/security.html">Sécurité</a>
@@ -53,8 +60,8 @@
     <h1>La commande passe de la salle à la cuisine, sans internet.</h1>
     <p class="lead">Sened gère votre restaurant depuis votre appareil : commandes, écran de cuisine, stock, dépenses et rapports. Les appareils des serveurs et de la cuisine passent par le réseau local du restaurant, et les données n'en sortent que dans une sauvegarde que vous décidez.</p>
     <div class="keys">
-      <a class="key key-1" href="#work">Ce que fait Sened</a>
-      <a class="key" href="#drive">La sauvegarde</a>
+      <a class="key key-1" href="#screens">Voir les écrans</a>
+      <a class="key" href="#work">Ce que fait Sened</a>
     </div>
   </section>
 
@@ -126,7 +133,79 @@
           <p>Une copie locale toujours, et une copie dans Google Drive si vous choisissez de lier votre compte.</p>
           <span class="tag">optionnel</span>
         </li>
+        <li>
+          <b>Langue de l'interface</b>
+          <p>Arabe avec une interface de droite à gauche, anglais et français — au choix dans les réglages de l'établissement.</p>
+          <span class="tag">trois langues</span>
+        </li>
       </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="screens">
+    <div class="wrap">
+      <span class="label">À l'intérieur du logiciel</span>
+      <h2>Des écrans d'une copie qui tourne, pas des maquettes</h2>
+      <p class="sub">Ces captures montrent Sened en train de faire tourner un établissement de démonstration, Harbor Grill, dans son interface anglaise. Le même logiciel fonctionne en arabe de droite à gauche et en français. Touchez une capture pour l'ouvrir en taille réelle.</p>
+      <div class="shots">
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/pos.webp"><img src="/assets/img/pos.webp" width="1200" height="675" loading="lazy" decoding="async" alt="L'écran de caisse : la grille des articles au centre, et la note de la commande sur le côté avec le total et le nombre d'articles"></a>
+          <figcaption>
+            <b>La caisse</b>
+            <span>Les articles rangés par catégorie, le type de commande entre salle, à emporter, livraison et en ligne, et le nombre de couverts, la table et le total qui se mettent à jour à chaque ligne.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/dashboard.webp"><img src="/assets/img/dashboard.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Le tableau de bord du jour : bénéfice net, ventes du jour, commandes en cours et panier moyen, avec le détail du bénéfice et les dernières commandes en dessous"></a>
+          <figcaption>
+            <b>Le tableau de bord du jour</b>
+            <span>Ventes du jour, bénéfice net, commandes en cours et panier moyen, avec le détail de ce qui a été déduit — et un avertissement net si des articles vendus n'ont aucun coût enregistré.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/kds.webp"><img src="/assets/img/kds.webp" width="1200" height="491" loading="lazy" decoding="async" alt="L'écran de cuisine en quatre colonnes — en attente, en préparation, prêt, servi — chaque bon portant son numéro et ses articles"></a>
+          <figcaption>
+            <b>L'écran de cuisine</b>
+            <span>Quatre colonnes que le bon traverse : en attente, en préparation, prêt, servi. Chaque bon porte son numéro, son heure, son type et sa table.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/tables.webp"><img src="/assets/img/tables.webp" width="1200" height="506" loading="lazy" decoding="async" alt="Le plan de salle : des tables disposées sur le sol et colorées selon leur état, avec deux niveaux listés au-dessus"></a>
+          <figcaption>
+            <b>Le plan de salle</b>
+            <span>Les tables se placent par glisser-déposer sur le plan du niveau, et la couleur dit l'état de chacune : libre, occupée, réservée, en nettoyage ou retenue.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/inventory.webp"><img src="/assets/img/inventory.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Le stock : un tableau des ingrédients avec les quantités disponibles et les seuils d'alerte, les articles sous le seuil en rouge"></a>
+          <figcaption>
+            <b>Stock et achats</b>
+            <span>Chaque matière a son unité, sa quantité disponible et son seuil d'alerte, et tout ce qui passe en dessous s'affiche en rouge. Les achats, les recettes, les mouvements de stock et les dépenses sont à côté.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot-link" href="/assets/img/staff.webp"><img src="/assets/img/staff.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Les comptes du personnel et la matrice des droits : les capacités en lignes, les rôles en colonnes, marqués autorisé ou non"></a>
+          <figcaption>
+            <b>Comptes et droits</b>
+            <span>Un tableau qui montre ligne par ligne ce que chaque rôle peut faire : propriétaire, gérant, caissier, serveur, et le cuisinier sur l'écran de cuisine.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot shot-phone">
+          <a class="shot-link" href="/assets/img/waiter.webp"><img src="/assets/img/waiter.webp" width="620" height="1105" loading="lazy" decoding="async" alt="L'application serveur sur un téléphone : la liste des tables avec leur état en haut, et la carte avec les prix en dessous"></a>
+          <figcaption>
+            <b>L'application serveur sur téléphone</b>
+            <span>Elle s'ouvre dans le navigateur du téléphone du serveur, sur le réseau du restaurant, sans rien installer. Il choisit la table, ajoute les articles, et la commande part en cuisine.</span>
+          </figcaption>
+        </figure>
+
+      </div>
     </div>
   </section>
 
@@ -169,6 +248,13 @@
           </tbody>
         </table>
       </div>
+      <figure class="shot shot-wide">
+        <a class="shot-link" href="/assets/img/backup.webp"><img src="/assets/img/backup.webp" width="1600" height="900" loading="lazy" decoding="async" alt="L'écran de sauvegarde dans les réglages de Sened : créer une sauvegarde, exporter la base, restaurer depuis un fichier, un bouton Connecter Google Drive, et l'historique des sauvegardes"></a>
+        <figcaption>
+          <b>L'écran de sauvegarde dans le logiciel</b>
+          <span>La sauvegarde locale, l'export de la base et la restauration fonctionnent tous sans compte Google. Lier Drive tient en un bouton en dessous, demandé seulement si vous le voulez, et l'historique des sauvegardes apparaît ensuite.</span>
+        </figcaption>
+      </figure>
       <div class="notice">
         <p><strong>À savoir :</strong> un fichier de sauvegarde contient toutes les données du restaurant. Protégez le compte Google par un mot de passe fort et la validation en deux étapes, et ne partagez jamais les liens de sauvegarde. Vous pouvez couper la liaison depuis les réglages à tout moment.</p>
       </div>
@@ -210,10 +296,10 @@
       <span class="label">Contact</span>
       <h2>Une question d'exploitation, ou un signalement de sécurité</h2>
       <div class="contact">
-        <a href="mailto:support@sened.group">
+        <a href="mailto:contact@sened.group">
           <span class="k">E-mail</span>
           <span class="t">Assistance, questions et demandes de confidentialité</span>
-          <span class="v">support@sened.group</span>
+          <span class="v">contact@sened.group</span>
         </a>
         <a href="/fr/security.html">
           <span class="k">Sécurité</span>
@@ -238,7 +324,7 @@
       <a href="/fr/security.html">Sécurité</a>
       <a href="/fr/privacy.html">Confidentialité</a>
       <a href="/fr/terms.html">Conditions</a>
-      <a href="mailto:support@sened.group">support@sened.group</a>
+      <a href="mailto:contact@sened.group">contact@sened.group</a>
     </nav>
     <p class="fine">Sened n'est pas affilié à Google. Google et Google Drive sont des marques de leurs propriétaires respectifs.</p>
   </div>
